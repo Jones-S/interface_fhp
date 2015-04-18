@@ -1,0 +1,47 @@
+html, body {
+  font-family: "news-gothic-std", sans-serif; //weights: 400 (normal/italic), 700
+  text-transform: none;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+
+
+.container {
+  width: 480px;
+  padding-right: 250px;
+  margin: $dist-huge auto;
+  position: relative;
+}
+
+.key-note {
+  padding: $dist-reg 0 $dist-reg 0;
+  margin: $dist-huge 0 $dist-huge 0;
+  position: relative;
+  left: 2*$dist-huge;
+}
+
+.round-img {
+  @include border-radius(50%);
+}
+
+.center-cntnt {
+  text-align: center;
+}
+
+
+
+
+
+
+.author-wrap {
+  border-top: 1px solid $primary-grey;
+  margin-top: $dist-big;
+  padding-top: $dist-reg;
+
+  img {
+    margin: $dist-reg 0 $dist-reg 0;
+    width: 200px;
+    height: 200px;
+  }
+}

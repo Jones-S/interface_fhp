@@ -1,0 +1,23 @@
+// var definitions
+$dist-huge: 50px;
+$dist-big: 25px;
+$dist-reg: 15px;
+$dist-small: 8px;
+
+
+// colors
+$primary-clr:       #D32638;
+$scnd-clr:          #190059;
+$primary-grey:      #D5D5D5;
+$dark-elem:         #010101;
+$bright-clr:        #E4E4E4;
+
+
+
+// import compass
+@import "compass/css3/border-radius";
+
+@import "reset";
+@import "general";
+@import "typography";
+@import "tables";

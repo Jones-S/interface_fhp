@@ -1,0 +1,201 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+/* line 5, ../scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, ../scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, ../scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, ../scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, ../scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------------------------------------------------------- */
+/* line 1, ../scss/_general.scss */
+html, body {
+  font-family: "news-gothic-std", sans-serif;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* line 10, ../scss/_general.scss */
+.container {
+  width: 480px;
+  padding-right: 250px;
+  margin: 50px auto;
+  position: relative;
+}
+
+/* line 17, ../scss/_general.scss */
+.key-note {
+  padding: 15px 0 15px 0;
+  margin: 50px 0 50px 0;
+  position: relative;
+  left: 100px;
+}
+
+/* line 24, ../scss/_general.scss */
+.round-img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 28, ../scss/_general.scss */
+.center-cntnt {
+  text-align: center;
+}
+
+/* line 37, ../scss/_general.scss */
+.author-wrap {
+  border-top: 1px solid #D5D5D5;
+  margin-top: 25px;
+  padding-top: 15px;
+}
+/* line 42, ../scss/_general.scss */
+.author-wrap img {
+  margin: 15px 0 15px 0;
+  width: 200px;
+  height: 200px;
+}
+
+/* line 1, ../scss/_typography.scss */
+h1, h2, h3, h4, h5 {
+  font-family: "brandon-grotesque", sans-serif;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* line 7, ../scss/_typography.scss */
+h1 {
+  font-size: 45px;
+  line-height: 58px;
+  color: #D32638;
+}
+
+/* line 13, ../scss/_typography.scss */
+h2 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+/* line 25, ../scss/_typography.scss */
+p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* line 31, ../scss/_typography.scss */
+.emph {
+  font-style: italic;
+  color: #190059;
+}
+
+/* line 36, ../scss/_typography.scss */
+.dist-to-prev {
+  margin-top: 25px;
+}
+
+/* line 40, ../scss/_typography.scss */
+.txt-note {
+  color: #190059;
+  float: right;
+  position: absolute;
+  right: 20px;
+  font-size: 13px;
+  max-width: 130px;
+}
+
+/* line 49, ../scss/_typography.scss */
+.key-note__txt {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 35px;
+  background: #D32638;
+  color: #fff;
+  padding: 5px 0 5px 0;
+  box-shadow: 10px 0 0 #D32638, -10px 0 0 #D32638;
+}
+
+/* line 60, ../scss/_typography.scss */
+.small-txt {
+  font-size: 11px;
+}
+
+/* line 1, ../scss/_tables.scss */
+table {
+  margin: 15px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 7, ../scss/_tables.scss */
+th {
+  font-family: "brandon-grotesque", sans-serif;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* line 14, ../scss/_tables.scss */
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+/* line 19, ../scss/_tables.scss */
+.th-row {
+  min-width: 120px;
+}

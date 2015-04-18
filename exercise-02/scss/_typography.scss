@@ -1,0 +1,62 @@
+h1, h2, h3, h4, h5 {
+  font-family: "brandon-grotesque", sans-serif; //weights: 400 (normal/italic), 700, 900
+  margin-bottom: $dist-reg;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 58px;
+  color: $primary-clr
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+a {
+
+  &:hover {
+
+  }
+}
+
+p {
+  margin-bottom: $dist-big;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.emph {
+  font-style: italic;
+  color: $scnd-clr;
+}
+
+.dist-to-prev {
+  margin-top: $dist-big;
+}
+
+.txt-note {
+  color: $scnd-clr;
+  float: right;
+  position: absolute;
+  right: 20px;
+  font-size: 13px;
+  max-width: 130px;
+}
+
+.key-note__txt {
+  font-family: "brandon-grotesque", sans-serif; //weights: 400 (normal/italic), 700, 900
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 35px;
+  background: $primary-clr;
+  color: #fff;
+  padding: 5px 0 5px 0;
+  box-shadow: 10px 0 0 $primary-clr, -10px 0 0 $primary-clr;
+}
+
+.small-txt {
+  font-size: 11px;
+}
