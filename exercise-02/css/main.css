@@ -198,4 +198,5 @@ th, td {
 /* line 19, ../scss/_tables.scss */
 .th-row {
   min-width: 120px;
+  padding-left: 0;
 }
