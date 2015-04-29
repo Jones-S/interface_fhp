@@ -224,8 +224,15 @@ table {
   border-collapse: separate;
   border-spacing: 0;
 }
+@media (max-width: 420px) {
+  /* line 1, ../scss/_tables.scss */
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+}
 
-/* line 7, ../scss/_tables.scss */
+/* line 11, ../scss/_tables.scss */
 th {
   font-family: "brandon-grotesque", sans-serif;
   margin-bottom: 15px;
@@ -237,19 +244,19 @@ th {
   border: 1.5px solid;
 }
 
-/* line 18, ../scss/_tables.scss */
+/* line 22, ../scss/_tables.scss */
 th, td {
   padding: 5px;
   padding-left: 8px;
   text-align: left;
 }
 
-/* line 24, ../scss/_tables.scss */
+/* line 28, ../scss/_tables.scss */
 td {
   padding-left: 12px;
 }
 
-/* line 28, ../scss/_tables.scss */
+/* line 32, ../scss/_tables.scss */
 .th-row {
   min-width: 120px;
 }

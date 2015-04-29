@@ -2,6 +2,10 @@ table {
   margin: $dist-reg 0 $dist-reg 0;
   border-collapse: separate;
   border-spacing: 0;
+  @include phone {
+    table-layout: fixed;
+    width: 100%;
+  }
 }
 
 th {
