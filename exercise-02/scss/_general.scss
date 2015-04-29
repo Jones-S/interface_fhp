@@ -3,6 +3,7 @@ html, body {
   text-transform: none;
   font-size: 16px;
   line-height: 22px;
+  font-kerning: normal;
 }
 
 
@@ -12,6 +13,17 @@ html, body {
   padding-right: 250px;
   margin: $dist-huge auto;
   position: relative;
+  @include tablet-phone {
+    margin-top: 0;
+    padding: 18px;
+    @include box-sizing(border-box);
+  }
+  @include tablet {
+    width: 85%;
+  }
+  @include phone {
+    width: 100%;
+  }
 }
 
 .key-note {
@@ -19,6 +31,12 @@ html, body {
   margin: $dist-huge 0 $dist-huge 0;
   position: relative;
   left: 2*$dist-huge;
+  @include tablet-phone {
+    // because red box is overlapping text
+    margin-left: 10px;
+    margin-right: 10px;
+    left: 0;
+  }
 }
 
 .round-img {
