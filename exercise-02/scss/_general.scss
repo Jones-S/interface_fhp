@@ -28,7 +28,7 @@ html, body {
 
 .key-note {
   padding: $dist-reg 0 $dist-reg 0;
-  margin: $dist-huge 0 $dist-huge 0;
+  margin: $dist-big 0 $dist-big 0;
   position: relative;
   left: 2*$dist-huge;
   @include tablet-phone {
@@ -47,8 +47,13 @@ html, body {
   text-align: center;
 }
 
-
-
+.left-indent {
+  position: relative;
+  left: 2*$dist-huge - 10px; //because other red indented elements have +10px additional border
+  @include tablet-phone {
+    left: 0;
+  }
+}
 
 
 

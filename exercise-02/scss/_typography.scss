@@ -10,8 +10,8 @@ h1 {
   color: $primary-clr;
 
   @include tablet {
-    font-size: 34px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 49px;
   }
 
   @include phone {
@@ -44,7 +44,7 @@ p {
 }
 
 .dist-to-prev {
-  margin-top: $dist-big;
+  margin-top: $dist-huge;
 }
 
 .txt-note {
@@ -54,6 +54,7 @@ p {
   right: 20px;
   font-size: 13px;
   max-width: 130px;
+  line-height: 21px;
   @include tablet-phone {
     display: none;
   }

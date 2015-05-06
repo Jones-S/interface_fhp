@@ -1,5 +1,5 @@
 table {
-  margin: $dist-reg 0 $dist-reg 0;
+  margin: $dist-big 0 $dist-big 0;
   border-collapse: separate;
   border-spacing: 0;
   @include phone {
@@ -30,5 +30,10 @@ td {
 }
 
 .th-row {
-  min-width: 120px;
+  // min-width: 120px;
+  padding: 0 10px 0 10px;
+}
+
+.inline-table {
+  margin: $dist-big+15px 0 $dist-big+15px 0;
 }
