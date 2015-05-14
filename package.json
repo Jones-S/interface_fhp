@@ -1,0 +1,41 @@
+{
+  "name": "git_webtypo",
+  "version": "1.0.0",
+  "description": "FH Potsdam class 'Webtypography' – creation of different websites including parallax pages.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://Jones-S@github.com/Jones-S/fhp_webtypo.git"
+  },
+  "keywords": [
+    "parallax",
+    "webtypography",
+    "fhp",
+    "potsdam"
+  ],
+  "author": {
+    "name": "Jonas Scheiwiller",
+    "email": "me@jonasscheiwiller.ch",
+    "url": "http://www.jonasscheiwiller.ch"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jones-S/fhp_webtypo/issues"
+  },
+  "homepage": "https://github.com/Jones-S/fhp_webtypo",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-compass": "^2.0.4",
+    "gulp-concat": "^2.5.2",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "node-sass": "^3.1.0",
+    "scrollmagic": "^2.0.5",
+    "uglify": "^0.1.3"
+  }
+}
