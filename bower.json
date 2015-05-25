@@ -1,0 +1,22 @@
+{
+  "name": "git_webtypo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Jones-S/fhp_webtypo",
+  "authors": [
+    "Jones <jonas.scheiwiller@zhdk.ch>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "compass-mixins": "~1.0.2"
+  }
+}
