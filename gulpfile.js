@@ -1,7 +1,7 @@
 // Load Node Modules/Plugins
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 var notify = require('gulp-notify');
 var minifyCSS = require('gulp-minify-css');
 // var browsersync = require('browser-sync');
@@ -19,9 +19,9 @@ var paths = {
 // task css also starts task 'compass' as well (probably synchronous)
 gulp.task('sass', function() {
     gulp.src('exercise-03/scss/main.scss')
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(sourcemaps.write('maps'))
+        // .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest('exercise-03/css'))
         .pipe(notify({ message: 'Sass complete' }));
 });
@@ -29,17 +29,14 @@ gulp.task('sass', function() {
 
 
 // concat gulp task
-// gulp.task('concatenate', function() {
-//     return gulp.src([
-//         'testcampusinterview/system/templates/frontend/default/js/3rdparty/SpryValidationTextField.js',
-//         'testcampusinterview/system/templates/frontend/default/js/3rdparty/SpryValidationTextarea.js',
-//         ])
-//         .pipe(sourcemaps.init())
-//         .pipe(concat('all.js'))
-//         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest('testcampusinterview/system/templates/frontend/default/js/'))
-//         .pipe(notify({ message: 'Concat task complete' }));
-// });
+gulp.task('concatenate', function() {
+    return gulp.src('exercise-03/js/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(concat('all.js'))
+        .pipe(sourcemaps.write('maps'))
+        .pipe(gulp.dest('exercise-03/js/dist'))
+        .pipe(notify({ message: 'Concatenate task complete' }));
+});
 
 
 // Watch Task
@@ -48,7 +45,7 @@ gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
 
     // Watch .js files
-    // gulp.watch('testcampusinterview/system/templates/frontend/default/js/*.js', ['concatenate']);
+    gulp.watch('exercise-03/js/*.js', ['concatenate']);
 });
 
 
