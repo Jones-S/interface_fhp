@@ -38,6 +38,20 @@ gulp.task('concatenate', function() {
         .pipe(notify({ message: 'Concatenate task complete' }));
 });
 
+// concat gulp task
+gulp.task('concat-external', function() {
+    return gulp.src([
+                'bower_components/jquery/dist/jquery.min.js',
+                'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+                'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+            ])
+        .pipe(sourcemaps.init())
+        .pipe(concat('3rdparty.js'))
+        .pipe(sourcemaps.write('maps'))
+        .pipe(gulp.dest('exercise-03/js/dist'))
+        .pipe(notify({ message: 'Concat external task complete' }));
+});
+
 
 // Watch Task
 gulp.task('watch', function() {
