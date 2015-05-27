@@ -1,24 +1,26 @@
-$(function){
-    // init controller
-    var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 100}});
+(function ($) { // iief = Immediately-Invoked Function Expression, mainly useful to limit scope
+    $(function() { // Shorthand for $( document ).ready()
 
-    // build scenes
-    new ScrollMagic.Scene({triggerElement: "#sec1"})
-                    .setClassToggle("#high1", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
-                    .addTo(controller);
-    new ScrollMagic.Scene({triggerElement: "#sec2"})
-                    .setClassToggle("#high2", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
-                    .addTo(controller);
-    new ScrollMagic.Scene({triggerElement: "#sec3"})
-                    .setClassToggle("#high3", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
-                    .addTo(controller);
-    new ScrollMagic.Scene({triggerElement: "#sec4"})
-                    .setClassToggle("#high4", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
-                    .addTo(controller);
+        // init controller
+        var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 0}, addIndicators: true});
+
+        // build scenes
+        new ScrollMagic.Scene({triggerElement: "#sec1"})
+                        .setClassToggle("#high1", "active") // add class toggle
+                        .addIndicators() // add indicators (requires plugin)
+                        .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec2"})
+                        .setClassToggle("#high2", "active") // add class toggle
+                        .addIndicators() // add indicators (requires plugin)
+                        .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec3"})
+                        .setClassToggle("#high3", "active") // add class toggle
+                        .addIndicators() // add indicators (requires plugin)
+                        .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec4"})
+                        .setClassToggle("#high4", "active") // add class toggle
+                        .addIndicators() // add indicators (requires plugin)
+                        .addTo(controller);
 
     });
 }(jQuery));
