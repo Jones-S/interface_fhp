@@ -1,3 +1,9 @@
 #red_marks circle {
-    mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  display: none;
 }
+
+#red_marks circle.display {
+    display: inline;
+}
+

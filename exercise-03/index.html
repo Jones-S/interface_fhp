@@ -8,39 +8,13 @@
     <meta name="keywords" content="" />
     <meta name="robots" content="" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="../node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
-    <script type="text/javascript" src="../node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <script type="text/javascript" src="js/dist/3rdparty.js"></script>
     <script type="text/javascript" src="js/dist/all.js"></script>
 </head>
 
 <body>
-    <div class="spacer s1" id="sec1">
-        <div class="box" id="high1">
-            <p>One</p>
-        </div>
-    </div>
-    <div class="spacer s1" id="sec2">
-        <div class="box" id="high2">
-            <p>Two</p>
-        </div>
-    </div>
-    <div class="spacer s1" id="sec3">
-        <div class="box" id="high3">
-            <p>Three</p>
-        </div>
-    </div>
-    <div class="spacer s1" id="sec4">
-        <div class="box" id="high4">
-            <p>Four</p>
-        </div>
-    </div>
-
-
-
-
-
-    <div>
+    <div id="svg-trigger"></div>
+    <div id="svg-pin">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 1000 600" enable-background="new 0 0 1000 600" xml:space="preserve">
             <g id="grid">
@@ -163,9 +137,9 @@
                 </g>
             </g>
             <g id="red_marks">
-                <circle fill="#E6332A" cx="584" cy="201.1" r="28.4"/>
-                <circle fill="#E6332A" cx="340" cy="267.1" r="59.4"/>
-                <circle fill="#E6332A" cx="571.9" cy="408.6" r="28.4"/>
+                <circle fill="#E6332A" cx="584" cy="201.1" r="28.4" class="hidden"/>
+                <circle fill="#E6332A" cx="340" cy="267.1" r="59.4" class="hidden"/>
+                <circle fill="#E6332A" cx="571.9" cy="408.6" r="28.4" class="hidden"/>
                 <text transform="matrix(1 0 0 1 121.7732 291.2021)"><tspan x="0" y="0" font-family="'GTPressura-LightItalic'" font-size="15">distinctive</tspan><tspan x="-16.4" y="18" font-family="'GTPressura-LightItalic'" font-size="15">crossbar ending</tspan></text>
                 <text transform="matrix(1 0 0 1 559.5684 138.2021)"><tspan x="0" y="0" font-family="'GTPressura-LightItalic'" font-size="15">rounded</tspan><tspan x="-12.3" y="18" font-family="'GTPressura-LightItalic'" font-size="15">connections</tspan></text>
                 <text transform="matrix(1 0 0 1 388.5684 455.2021)"><tspan x="0" y="0" font-family="'GTPressura-LightItalic'" font-size="15">rounded</tspan><tspan x="-12.3" y="18" font-family="'GTPressura-LightItalic'" font-size="15">connections</tspan></text>
