@@ -7,6 +7,7 @@ var minifyCSS = require('gulp-minify-css');
 // var browsersync = require('browser-sync');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
+var plumber = require('gulp-plumber');
 
 
 // Asset paths
@@ -14,6 +15,13 @@ var paths = {
   sass: ['exercise-03/scss/*.scss'],
   css:  ['exercise-03/css/'],
 };
+
+
+// Error Helper
+function onError(err) {
+    notify({ message: 'Oh Boy. Error.' });
+    console.log(err);
+}
 
 
 // task css also starts task 'compass' as well (probably synchronous)
@@ -30,7 +38,15 @@ gulp.task('sass', function() {
 
 // concat gulp task
 gulp.task('concatenate', function() {
-    return gulp.src('exercise-03/js/*.js')
+    return gulp.src([
+                'bower_components/jquery/dist/jquery.min.js',
+                'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+                'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+                'exercise-03/js/*.js',
+            ])
+        .pipe(plumber({
+                errorHandler: onError
+            }))
         .pipe(sourcemaps.init())
         .pipe(concat('all.js'))
         .pipe(sourcemaps.write('maps'))
@@ -38,19 +54,7 @@ gulp.task('concatenate', function() {
         .pipe(notify({ message: 'Concatenate task complete' }));
 });
 
-// concat gulp task
-gulp.task('concat-external', function() {
-    return gulp.src([
-                'bower_components/jquery/dist/jquery.min.js',
-                'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-                'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
-            ])
-        .pipe(sourcemaps.init())
-        .pipe(concat('3rdparty.js'))
-        .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest('exercise-03/js/dist'))
-        .pipe(notify({ message: 'Concat external task complete' }));
-});
+
 
 
 // Watch Task
