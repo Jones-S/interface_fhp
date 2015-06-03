@@ -9,12 +9,24 @@ $phone-width: 420px;
 // colors
 $clr-primary:           #EEEEEE;
 $clr-secondary:         #fff;
+$clr-3th:               #000;
+$clr-4th:               #1A1A1A;
+$clr-5th:               #272727;
 
 // $primary-clr:       #D32638;
 // $scnd-clr:          #9F98B0;
 // $primary-grey:      #D5D5D5;
 // $dark-elem:         #010101;
 // $bright-clr:        #E4E4E4;
+
+$font-family-base:          "gt_pressura_trialbold", 'Verdana', Verdana, sans-serif;
+$font-family-base-reg:      "gt_pressura_trial_regularRg", 'Verdana', Verdana, sans-serif;
+$font-family-base-light:    "gt_pressura_triallight", 'Verdana', Verdana, sans-serif;
+$font-size-base:            62.5%;      // 16px (default) * 0.625 = 10px        _> base 10 to calc easier
+
+
+
+
 
 // mixins
 @mixin tablet {
@@ -39,6 +51,8 @@ $clr-secondary:         #fff;
 @import "./bower_components/compass-mixins/lib/compass";
 // import stylesheets
 @import "reset";
+@import "fontface";
+@import "general";
 @import "typography";
 @import "svg";
 @import "scrollmagic";

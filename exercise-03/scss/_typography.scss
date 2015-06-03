@@ -1,0 +1,44 @@
+html, body {
+    font-family: $font-family-base;
+    text-transform: none;
+    font-size: $font-size-base;    //10px
+    line-height: 2.4rem; //24px = baseline grid
+
+    // ligatures and kerning
+    -webkit-font-kerning:   normal;
+    -moz-font-kerning:      normal;
+    font-kerning:           normal;
+    -webkit-font-feature-settings:      "liga";
+    -moz-font-feature-settings:         "liga", "kern";
+    font-feature-settings:              "liga", "kern";
+
+}
+
+h1 {
+  font-size: 8.0rem;
+  color: $clr-4th;
+  line-height: 1em;
+  margin-left: -0.4rem;
+}
+
+h2 {
+  font-family: $font-family-base-light;
+  font-size: 3.0rem;
+  color: $clr-4th;
+  line-height: 1em;
+}
+
+p {
+  max-width: 40em;
+  font-family: $font-family-base-reg;
+}
+
+.bold {
+    // font-family: "gt_pressura_trialbold", 'Verdana', Verdana, sans-serif;
+}
+
+.font-description__p {
+  font-size: 3.0rem;
+  line-height: 1.4;
+  color: #fff
+}

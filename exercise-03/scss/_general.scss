@@ -1,0 +1,23 @@
+body, html {
+  height: 100%;
+}
+
+.font-title,
+.font-description,
+.subtitle-wrap {
+  width: 100%;
+  min-height: 100%;
+  padding: 10% 10% 10% 10%;
+  background-color: $clr-5th;
+  box-sizing: border-box;
+}
+
+.font-title {
+  background-color: $clr-primary;
+}
+
+.subtitle-wrap {
+  background-color: $clr-secondary;
+  height: auto;
+  padding-bottom: 0;
+}
