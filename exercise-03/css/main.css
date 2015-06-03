@@ -58,24 +58,54 @@ table {
   border-spacing: 0; }
 
 /* ---------------------------------------------------------- */
-#red_marks circle {
-  mix-blend-mode: multiply;
-  display: none; }
+svg {
+  display: block; }
 
-#red_marks circle.display {
-  display: inline; }
+.hidden {
+  mix-blend-mode: multiply;
+  opacity: 0;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  transition: all 0.7s ease; }
+
+.display {
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  transition: all 0.7s ease; }
+
+.svg-wrapper {
+  height: 100%;
+  min-width: 100%;
+  padding-top: 10%; }
+
+.svg-pin {
+  background-color: #EEEEEE; }
+
+.svg-pin1 {
+  background-color: #fff; }
+
+.svg-pin2 {
+  background-color: #EEEEEE; }
+
+.svg-pin3 {
+  background-color: #fff; }
+
+.svg-pin4 {
+  background-color: #EEEEEE; }
+
+.svg-pin5 {
+  background-color: #fff; }
 
 body, html {
   height: 100%; }
-
-.spacer {
-  height: 1500px;
-  background-color: #E9EFEF; }
 
 p {
   max-width: 13em;
   margin: 0 auto; }
 
-.trigger {
-  height: 10px;
-  background-color: #B6BCBC; }
+/*# sourceMappingURL=maps/main.css.map */

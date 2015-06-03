@@ -27,9 +27,12 @@ function onError(err) {
 // task css also starts task 'compass' as well (probably synchronous)
 gulp.task('sass', function() {
     gulp.src('exercise-03/scss/main.scss')
-        // .pipe(sourcemaps.init())
+        .pipe(plumber({
+                errorHandler: onError
+            }))
+        .pipe(sourcemaps.init())
         .pipe(sass())
-        // .pipe(sourcemaps.write('maps'))
+        .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest('exercise-03/css'))
         .pipe(notify({ message: 'Sass complete' }));
 });

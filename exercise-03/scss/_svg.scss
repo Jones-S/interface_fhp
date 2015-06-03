@@ -1,9 +1,52 @@
-#red_marks circle {
+svg {
+  display: block;
+}
+
+.hidden {
   mix-blend-mode: multiply;
-  display: none;
+  opacity: 0;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
-#red_marks circle.display {
-    display: inline;
+.display {
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
+.svg-wrapper {
+  height: 100%;
+  min-width: 100%;
+  padding-top: 10%;
+}
+
+.svg-pin {
+  background-color: $clr-primary;
+}
+
+.svg-pin1 {
+  background-color: $clr-secondary;
+}
+
+.svg-pin2 {
+  background-color: $clr-primary;
+}
+
+.svg-pin3 {
+  background-color: $clr-secondary;
+}
+
+.svg-pin4 {
+  background-color: $clr-primary;
+}
+
+.svg-pin5 {
+  background-color: $clr-secondary;
+}
