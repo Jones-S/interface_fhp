@@ -121,6 +121,13 @@ body, html {
   height: auto;
   padding-bottom: 0; }
 
+.icons {
+  background-color: #e6332a; }
+
+.icons__title {
+  height: 100%;
+  background-color: #e6332a; }
+
 html, body {
   font-family: "gt_pressura_trialbold", "Verdana", Verdana, sans-serif;
   text-transform: none;
@@ -153,6 +160,12 @@ p {
   font-size: 3.0rem;
   line-height: 1.4;
   color: #fff; }
+
+.icons__title h2 {
+  color: #fff;
+  font-family: "gt_pressura_trialbold", "Verdana", Verdana, sans-serif;
+  font-size: 8.0rem;
+  line-height: 1em; }
 
 svg {
   display: block; }
