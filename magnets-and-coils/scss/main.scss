@@ -16,9 +16,10 @@ $clr-secondary:         #2E2E2D;
 $clr-quiet:             #969696;
 $clr-link-hover:        #FF3D3D;
 
-$font-family-base:          "Circular-Book", "Circular", "europa", "Futura", sans-serif;
-$font-family-base-bold:     "Circular-Bold", "Circular", "europa", "Futura", sans-serif;
-$font-family-base-medium:   "Circular-Medium", "Circular", "europa", "Futura", sans-serif;
+$font-family-base:          "brandon-grotesque", "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base-bold:     "brandon-grotesque", "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base-medium:   "brandon-grotesque", "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-text-base:     "ff-meta-serif-web-pro", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 $font-size-base:            62.5%;      // 16px (default) * 0.625 = 10px        _> base 10 to calc easier
 // $base-font-weight: 300;
 $baseline-height: 1.7rem;
