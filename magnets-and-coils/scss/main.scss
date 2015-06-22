@@ -1,0 +1,39 @@
+// var definitions
+$width-content:         96.0rem;     // 960px
+
+
+// media query break points
+// $big-tablet-width:      1024px;
+// $tablet-width:          768px;
+// $phone-width:           420px;
+
+$breakpoints: (phone: 450px, tablet: 768px, big-tablet: 1024px, desktop: 1400px);
+
+
+// colors
+$clr-primary:           #F7F7F7;
+$clr-secondary:         #2E2E2D;
+$clr-quiet:             #969696;
+$clr-link-hover:        #FF3D3D;
+
+$font-family-base:          "Circular-Book", "Circular", "europa", "Futura", sans-serif;
+$font-family-base-bold:     "Circular-Bold", "Circular", "europa", "Futura", sans-serif;
+$font-family-base-medium:   "Circular-Medium", "Circular", "europa", "Futura", sans-serif;
+$font-size-base:            62.5%;      // 16px (default) * 0.625 = 10px        _> base 10 to calc easier
+// $base-font-weight: 300;
+$baseline-height: 1.7rem;
+
+// mixins
+
+
+@import "../../bower_components/_normalize.scss/normalize";
+@import "../../bower_components/include-media/dist/include-media";
+
+// import stylesheets
+@import "reset";
+@import "typography";
+@import "tables";
+@import "navigation";
+@import "general";
+
+

@@ -1,0 +1,115 @@
+html, body {
+    font-family: $font-family-base;
+    text-transform: none;
+    font-size: $font-size-base;    //10px
+    line-height: $baseline-height; //17px = baseline grid
+
+    // ligatures and kerning
+    -webkit-font-kerning:   normal;
+    -moz-font-kerning:      normal;
+    font-kerning:           normal;
+    -webkit-font-feature-settings:      "liga";
+    -moz-font-feature-settings:         "liga", "kern";
+    font-feature-settings:              "liga", "kern";
+
+}
+
+.content, nav, footer {
+    font-size: 2.5rem;
+}
+
+// http://thesassway.com/advanced/modular-css-typography
+// https://drewish.com/tools/vertical-rhythm/
+// define classes which can then be applied to the elements (modularity!)
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    max-width: 79.0rem;
+    font-family: $font-family-base-medium;
+}
+
+.h1 {
+    font-size: 4.0rem;
+    line-height: 5.4rem;        // lineheight + margin-top + margin-bottom must be a multiple of 24px (baseline grid)
+    margin-top: 2.2rem;
+    margin-bottom: 2.0rem;
+}
+
+.h2, .h3 {
+    font-size: $baseline-height;
+    line-height: 3.2rem;
+    margin-top: $baseline-height;
+    margin-bottom: 1.6rem;
+    color: $clr-link-hover;
+}
+
+
+// .h4 { font-size: 110%; }
+// .h5 { font-size: 100%; }
+
+// if necessary to mark text
+.quiet { color: $clr-quiet; }
+// .loud  { color: $loud-color; }
+
+.italic { font-style: italic; }
+.bold   { font-weight: 700; }
+
+
+
+i, em { @extend .italic; }
+b, strong { @extend .bold; }
+
+h1, .h1 { @extend .h1; }
+h2, .h2 { @extend .h2; }
+h3, .h3 { @extend .h3; }
+
+
+
+a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 0.2rem solid #000;
+    &:hover {
+        color: $clr-link-hover;
+        border-color: $clr-link-hover;
+    }
+}
+
+p {
+    // hyphenation
+    -webkit-hyphens:    auto;
+    -moz-hyphens:       auto;
+    -ms-hyphens:        auto;
+    hyphens:            auto;
+
+    font-size: 2.5rem; //18px
+    line-height: $baseline-height; // 1em = $base-font-size, because html/body font-size = $base-font-size -> 1.3333 = 24px
+    margin-top: $baseline-height;
+    margin-bottom: $baseline-height;
+    // http://webtypography.net/2.1.2 -> 33em for article with – in german 40em!
+    // our site has a smaller paragraph width
+}
+
+.weight-book { font-family: $font-family-base; }
+.weight-medium { font-family: $font-family-base-medium; font-weight: 700; }
+.weight-bold { font-family: $font-family-base-bold; font-weight: 700; }
+.orange { color: $clr-link-hover; }
+
+.size-14 { font-size: 1.4rem; }
+.size-24 { font-size: $baseline-height; }
+.size-40 { font-size: 4.0rem; margin-top: 2.2rem; margin-bottom: 2.0rem; line-height: 5.4rem; }
+.size-54 { font-size: 5.4rem; margin-top: 3.0rem; margin-bottom: 3.0rem; line-height: 6.0rem; } // 54px, becuase line-height 1.2 -> margin bottom 0.8
+
+.vertical-text {
+    display: inline-block;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+    /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+    -webkit-transform-origin: 48% 70%;
+    -moz-transform-origin: 48% 70%;
+    -ms-transform-origin: 48% 70%;
+    -o-transform-origin: 48% 70%;
+    transform-origin: 48% 70%;
+}

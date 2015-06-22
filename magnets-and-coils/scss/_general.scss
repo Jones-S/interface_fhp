@@ -1,0 +1,57 @@
+html {
+
+}
+
+body {
+    background-color: $clr-primary;
+    // background-color: #53BEB5; // background color for testing semi transparency
+}
+
+//clearfix for floating elements -> http://css-tricks.com/all-about-floats/
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0px;
+  clear: both;
+  font-size: 0;
+}
+
+
+// The element at the top of the page right after the fixed navigation bar MUST have sufficient top margin or else it will be covered by the bar
+
+.content {
+}
+
+.button {
+}
+
+.v-rhythm-adjust {
+    margin-top: $baseline-height;
+}
+
+// different distance to previous elements
+.dist-to-prev-base      { margin-top: $baseline-height; }// 24px = 1 unit of baseline grid
+.dist-to-prev-double    { margin-top: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
+.dist-to-prev-triple    { margin-top: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
+.dist-to-prev-quad      { margin-top: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
+
+// distance to following element
+.dist-to-next-base      { margin-bottom: $baseline-height; }// 24px = 1 unit of baseline grid
+.dist-to-next-double    { margin-bottom: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
+.dist-to-next-triple    { margin-bottom: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
+.dist-to-next-quad      { margin-bottom: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
+
+section {
+    min-height: 19*$baseline-height;
+    padding-bottom: 3*$baseline-height;
+    @include media("<tablet") {
+        min-height: 10*$baseline-height;
+    }
+}
+
+
+
+
+
+
