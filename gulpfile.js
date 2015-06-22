@@ -12,8 +12,8 @@ var plumber = require('gulp-plumber');
 
 // Asset paths
 var paths = {
-  sass: ['exercise-03/scss/*.scss'],
-  css:  ['exercise-03/css/'],
+  sass: ['magnets-and-coils/scss/*.scss'],
+  css:  ['magnets-and-coils/css/'],
 };
 
 
@@ -26,14 +26,14 @@ function onError(err) {
 
 // task css also starts task 'compass' as well (probably synchronous)
 gulp.task('sass', function() {
-    gulp.src('exercise-03/scss/main.scss')
+    gulp.src('magnets-and-coils/scss/main.scss')
         .pipe(plumber({
                 errorHandler: onError
             }))
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest('exercise-03/css'))
+        .pipe(gulp.dest('magnets-and-coils/css'))
         .pipe(notify({ message: 'Sass complete' }));
 });
 
@@ -43,9 +43,7 @@ gulp.task('sass', function() {
 gulp.task('concatenate', function() {
     return gulp.src([
                 'bower_components/jquery/dist/jquery.min.js',
-                'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-                'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
-                'exercise-03/js/*.js',
+                'magnets-and-coils/js/*.js',
             ])
         .pipe(plumber({
                 errorHandler: onError
@@ -53,7 +51,7 @@ gulp.task('concatenate', function() {
         .pipe(sourcemaps.init())
         .pipe(concat('all.js'))
         .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest('exercise-03/js/dist'))
+        .pipe(gulp.dest('magnets-and-coils/js/dist'))
         .pipe(notify({ message: 'Concatenate task complete' }));
 });
 
@@ -66,12 +64,12 @@ gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
 
     // Watch .js files
-    gulp.watch('exercise-03/js/*.js', ['concatenate']);
+    gulp.watch('magnets-and-coils/js/*.js', ['concatenate']);
 });
 
 
 // Default Task
-gulp.task('default', ['watch']);
+gulp.task('default', ['sass', 'watch']);
 
 
 
