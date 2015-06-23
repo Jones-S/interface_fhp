@@ -16,6 +16,7 @@ html, body {
 
 .content, nav, footer {
     font-size: 2.5rem;
+    line-height: 2 * $baseline-height;
 }
 
 // http://thesassway.com/advanced/modular-css-typography
@@ -54,6 +55,21 @@ html, body {
 .italic { font-style: italic; }
 .bold   { font-weight: 700; }
 .center { text-align: center; }
+.underline {
+    text-decoration: none;
+    background-repeat: repeat-x;
+
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==);
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #f7f7f7 93%, #f7f7f7 93%, #000000 94%, #000000 96%, #000000 96%, #f7f7f7 97%, #f7f7f7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(93%,#f7f7f7), color-stop(93%,#f7f7f7), color-stop(94%,#000000), color-stop(96%,#000000), color-stop(96%,#000000), color-stop(97%,#f7f7f7), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,#000000 94%,#000000 96%,#000000 96%,#f7f7f7 97%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,#000000 94%,#000000 96%,#000000 96%,#f7f7f7 97%,#f7f7f7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,#000000 94%,#000000 96%,#000000 96%,#f7f7f7 97%,#f7f7f7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,#000000 94%,#000000 96%,#000000 97%,#f7f7f7 97%,#f7f7f7 100%); /* W3C */
+
+    background-position: left 1.3em;
+    text-shadow: -1px -1px 0 $clr-primary, 1px -1px 0 $clr-primary, -1px 1px 0 $clr-primary, 1px 1px 0 $clr-primary;
+ }
 
 
 
@@ -69,10 +85,8 @@ h3, .h3 { @extend .h3; }
 a {
     color: #000;
     text-decoration: none;
-    border-bottom: 0.2rem solid #000;
     &:hover {
         color: $clr-link-hover;
-        border-color: $clr-link-hover;
     }
 }
 
@@ -109,16 +123,40 @@ p {
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
 
-    /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
-    -webkit-transform-origin: 48% 70%;
-    -moz-transform-origin: 48% 70%;
-    -ms-transform-origin: 48% 70%;
-    -o-transform-origin: 48% 70%;
-    transform-origin: 48% 70%;
+    //also accepts left, right, top, bottom coordinates; not required, but a good idea for styling
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
 }
 
 .intro-text__paragraph {
     background: -webkit-linear-gradient(-219deg, #FDC63B 4%, #F6A446 29%, #E84D3B 75%, #E42C35 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 3.0rem;
+    line-height: 3*$baseline-height;
+}
+
+.sector-text, .sector-illu-text {
+    font-family: $font-family-text-base;
+}
+
+.sector-illu-text--intro {
+    font-family: $font-family-base;
+}
+
+.text-aside {
+    font-family: $font-family-base-bold;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 2.3%;
+}
+
+.highlight-text {
+    font-size:  4.0rem;
+    line-height: 3 * $baseline-height;
+    margin-top: -0.9rem;
 }

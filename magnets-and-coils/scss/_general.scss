@@ -57,23 +57,84 @@ section {
     }
 }
 
-.sector-text, .sector-highlight {
+.text-aside-wrap {
+    position: relative;
+}
+
+.sector-text, .sector-highlight, .sector-illu-text  {
     margin: 0 auto 2*$baseline-height auto;
     width: 90%;
     max-width: 79.0rem;
+    position: relative;
+}
+
+.sector-illu-text--intro {
+    min-height: 15 * $baseline-height; // height of the image;
+}
+
+.sector-illu-text--coil {
+    min-height: 15 * $baseline-height; // > height of coil img + margin (2 * baseline)
+}
+
+.sector-highlight {
+    text-align: center;
 }
 
 .img-full-width-wrap {
     overflow: hidden;
+    position: relative;
+    margin-bottom: 3 * $baseline-height;
 }
 
 .divider-line {
     width: 20.0rem;
-    height: 0.05rem;
+    height: 0.1rem;
     margin: 0 auto;
-    background-color: #000;
+    background-color: $clr-quiet;
 }
 
+.illu-wrap {
+    float: left;
+    position: absolute;
+    top: 50%;
+}
+
+.illu-wrap--intro {
+    margin-top: -(25.5rem / 2); // height of img / 2
+    left: -12.0rem; // 50% of the width of the image
+}
+
+.illu-wrap--coil {
+    margin-top: -(27.1rem / 2) + $baseline-height;
+    left: -7.8rem; // 50% of the width of the image
+}
+
+.text-by-illu {
+    width: calc(90% - 24.0rem + (8*1.7rem));
+    float: right;
+    position: relative;
+    // left: -2 * $baseline-height;
+    // padding-left: 3 * $baseline-height;
+}
+
+.img-flash {
+    margin-bottom: 1.8rem;
+    @include media("<600px") {
+        display: none;
+    }
+}
+
+.img-full-width {
+    width:  100%;
+    height: auto;
+}
+
+.img-description {
+    z-index: 50;
+}
+
+.marg-top-19 { margin-top: 19rem; }
+.marg-top-21 { margin-top: 21rem; }
 
 // different distance to previous elements
 .dist-to-prev-base      { margin-top: $baseline-height; }// 24px = 1 unit of baseline grid

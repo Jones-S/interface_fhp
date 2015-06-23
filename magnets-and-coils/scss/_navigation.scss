@@ -9,7 +9,7 @@
     height: 6.0rem;
     background-color: $clr-primary;     // fallback for browsers without rgba
     background-color: rgba($clr-primary, 0.9);
-    font-size: $baseline-height;
+    font-size: 2.5rem;
     color: #000;
     line-height: 3.0rem;
 }
@@ -48,15 +48,17 @@
 
 .menu__items li {
     display: inline-block;
-    margin-right: 8%;
+    margin-left: 8%;
+    float: right;
     @include media("<950px") {
-        margin-right: 5%;
+        margin-left: 5%;
     }
     @include media("<tablet") {
         display: block;
         text-align: center;
         margin: 0;
         height: 6.0rem;
+        float: none;
     }
 
 }
@@ -64,12 +66,10 @@
 .menu__links {
     text-decoration: none;
     padding-bottom: 0.5rem;
-    border-bottom: 0.2rem #000 solid;
     color: #000;
 
     &:hover {
         color: $clr-link-hover;
-        border-bottom: 0.2rem $clr-link-hover solid;
     }
 }
 
@@ -123,5 +123,5 @@
 }
 
 .active {
-    border-bottom: 0.2rem solid $clr-link-hover;
+  color: $clr-link-hover;
 }
