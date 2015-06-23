@@ -10,31 +10,6 @@ body {
         position: relative;
 }
 
-body {
-    position: relative;
-}
-
-body:after {
-    position: absolute;
-    width: auto;
-    height: 7000px;
-    z-index: 9999;
-    content: '';
-    display: block;
-    pointer-events: none;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url(../img/baseline-17.png) repeat top left;
-}
-
-body:active:after {
-    display: none;
-}
-
-
-
 
 //clearfix for floating elements -> http://css-tricks.com/all-about-floats/
 .clearfix:after {
@@ -61,17 +36,6 @@ body:active:after {
     margin-top: $baseline-height;
 }
 
-// different distance to previous elements
-.dist-to-prev-base      { margin-top: $baseline-height; }// 24px = 1 unit of baseline grid
-.dist-to-prev-double    { margin-top: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
-.dist-to-prev-triple    { margin-top: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
-.dist-to-prev-quad      { margin-top: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
-
-// distance to following element
-.dist-to-next-base      { margin-bottom: $baseline-height; }// 24px = 1 unit of baseline grid
-.dist-to-next-double    { margin-bottom: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
-.dist-to-next-triple    { margin-bottom: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
-.dist-to-next-quad      { margin-bottom: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
 
 section {
     min-height: 19*$baseline-height;
@@ -84,6 +48,7 @@ section {
 .video-wrap {
     height: 100%;
     min-height: 100%;
+    overflow: hidden;
     video {
         min-width: 100%;
         min-height: 100%;
@@ -92,7 +57,33 @@ section {
     }
 }
 
+.sector-text, .sector-highlight {
+    margin: 0 auto 2*$baseline-height auto;
+    width: 90%;
+    max-width: 79.0rem;
+}
+
+.img-full-width-wrap {
+    overflow: hidden;
+}
+
+.divider-line {
+    width: 20.0rem;
+    height: 0.05rem;
+    margin: 0 auto;
+    background-color: #000;
+}
 
 
+// different distance to previous elements
+.dist-to-prev-base      { margin-top: $baseline-height; }// 24px = 1 unit of baseline grid
+.dist-to-prev-double    { margin-top: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
+.dist-to-prev-triple    { margin-top: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
+.dist-to-prev-quad      { margin-top: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
 
+// distance to following element
+.dist-to-next-base      { margin-bottom: $baseline-height; }// 24px = 1 unit of baseline grid
+.dist-to-next-double    { margin-bottom: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
+.dist-to-next-triple    { margin-bottom: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
+.dist-to-next-quad      { margin-bottom: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
 

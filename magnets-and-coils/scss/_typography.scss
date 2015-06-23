@@ -27,19 +27,20 @@ html, body {
 }
 
 .h1 {
-    font-size: 4.0rem;
-    line-height: 5.4rem;        // lineheight + margin-top + margin-bottom must be a multiple of 24px (baseline grid)
-    margin-top: 2.2rem;
-    margin-bottom: 2.0rem;
+    font-size: 7.0rem;
+    line-height: 6 * $baseline-height;        // lineheight + margin-top + margin-bottom must be a multiple of 24px (baseline grid)
+    margin-top: 3 * $baseline-height;
+    margin-bottom: $baseline-height;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .h2, .h3 {
-    font-size: $baseline-height;
-    line-height: 3.2rem;
+    font-size: 2.8rem;
+    line-height: 2 * $baseline-height;
     margin-top: $baseline-height;
-    margin-bottom: 1.6rem;
-    color: $clr-link-hover;
+    margin-bottom: $baseline-height;
+    text-transform: uppercase;
 }
 
 
@@ -52,6 +53,7 @@ html, body {
 
 .italic { font-style: italic; }
 .bold   { font-weight: 700; }
+.center { text-align: center; }
 
 
 
@@ -81,8 +83,8 @@ p {
     -ms-hyphens:        auto;
     hyphens:            auto;
 
-    font-size: 2.5rem; //18px
-    line-height: $baseline-height; // 1em = $base-font-size, because html/body font-size = $base-font-size -> 1.3333 = 24px
+    font-size: 2.5rem;
+    line-height: 2 * $baseline-height; // 1em = $base-font-size, because html/body font-size = $base-font-size -> 1.3333 = 24px
     margin-top: $baseline-height;
     margin-bottom: $baseline-height;
     // http://webtypography.net/2.1.2 -> 33em for article with – in german 40em!
@@ -113,4 +115,10 @@ p {
     -ms-transform-origin: 48% 70%;
     -o-transform-origin: 48% 70%;
     transform-origin: 48% 70%;
+}
+
+.intro-text__paragraph {
+    background: -webkit-linear-gradient(-219deg, #FDC63B 4%, #F6A446 29%, #E84D3B 75%, #E42C35 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
