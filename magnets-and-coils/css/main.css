@@ -563,8 +563,34 @@ table {
 .active {
   border-bottom: 0.2rem solid #FF3D3D; }
 
+html {
+  height: 100%; }
+
 body {
-  background-color: #F7F7F7; }
+  background-color: #F7F7F7;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+body {
+  position: relative; }
+
+body:after {
+  position: absolute;
+  width: auto;
+  height: 7000px;
+  z-index: 9999;
+  content: '';
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/baseline-17.png) repeat top left; }
+
+body:active:after {
+  display: none; }
 
 .clearfix:after {
   content: " ";
@@ -573,6 +599,10 @@ body {
   height: 0px;
   clear: both;
   font-size: 0; }
+
+.content {
+  height: 100%;
+  position: relative; }
 
 .v-rhythm-adjust {
   margin-top: 1.7rem; }
@@ -607,5 +637,14 @@ section {
   @media (max-width: 767px) {
     section {
       min-height: 17rem; } }
+
+.video-wrap {
+  height: 100%;
+  min-height: 100%; }
+  .video-wrap video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; }
 
 /*# sourceMappingURL=maps/main.css.map */
