@@ -21,22 +21,25 @@
     <script type="text/javascript" src="js/dist/all.js"></script>
 </head>
 <body>
-    <nav class="fixed-nav-bar clearfix">
-        <div id="menu" class="menu">
+    <nav class="fixed-nav-bar fixed-nav-bar--transparent clearfix">
+        <div id="menu" class="menu clearfix">
             <a class="show menu_btn" href="#menu">Menu</a>
             <a class="hide menu_btn" href="#hidemenu">Menu</a>
+            <div class="logo"></div>
             <ul class="menu__items clearfix">
-                <li><a class="menu__links" href="#">Designathon</a></li>
-                <li><a class="menu__links" href="#">Tickets</a></li>
-                <li><a class="menu__links" href="#">Sponsoren</a></li>
+                <li><a class="menu__links bold active" href="#">Magnets & Coils</a></li>
+                <li><a class="menu__links bold" href="#">Typeface Analysis</a></li>
+                <li><a class="menu__links bold" href="#">Typography Exercise</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="content">
-        <div class="video-wrap">
+
+        <div class="video-wrap clearfix">
+            <!-- <video src="img/magnets_and_coils.mp4" preload loop autoplay> -->
             <video src="img/magnets_and_coils.mp4" preload poster="img/fallback_magnets_and_coils.jpg">
-                <p> Try this page in a modern browser! Or you can <a href="img/magnets_and_coils.mp4">download the  video</a> instead.</p>
+                <p>Try this page in a modern browser! Or you can <a href="img/magnets_and_coils.mp4">download the video</a> instead.</p>
             </video>
         </div>
 
@@ -52,47 +55,57 @@
         <div class="sector-illu-text sector-illu-text--intro clearfix">
             <div class="illu-wrap illu-wrap--intro"><img src="img/magnet_ball.png" alt="Magnet Ball Graphic"></div>
             <div class="intro-text text-by-illu">
-                <p class="intro-text__paragraph bold">During the school project in interaction design at the ZHdK, the topic 'energy harvesting' was centered. We approached this topic in a playful way and built a marble run game, where two players can compete against each other. Short reaction time and good anticipation wins.</p>
+                <p class="intro-text__paragraph bold">&ldquo;Magnets and Coils&rdquo; is marble run game, where two players can compete against each other. Short reaction times and well targeted anticipation help to win this game where the aim is to hit a button as swift as possible after the magnetic marble passes one of the copper coils&nbsp;along&nbsp;he&nbsp;run.</p>
             </div>
         </div>
 
         <div class="sector-text">
-            <p class="sector-text__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="sector-text__paragraph">In a physcial computing module in <strong>Interaction Design</strong> at the <strong>ZHdK</strong> we had to come up with a concept to embrace the topic <strong>&ldquo;energy harvesting&rdquo;</strong>.
+With the premise to use gamification and the knowledge that we can induce current with the use of magnets and copper coils, we decided to build a marble run with a magnetic ball, which passes through copper coils every&nbsp;now&nbsp;and&nbsp;then.</p>
         </div>
 
         <div class="sector-highlight">
             <div class="dist-to-prev-base divider-line"></div>
             <img class="dist-to-prev-base img-flash" src="img/flash.png"
                 srcset="img/flash.png 1x, img/flash@2x.png 2x" />
-            <p class="highlight-text italic"><span class="underline">Fast reaction and well applied
-                anticipation are required to win&nbsp;a&nbsp;game.</span></p>
-            <div class="divider-line dist-to-prev-double"></div>
+            <p class="highlight-text italic"><span class="underline">You have to be fast<br>and&nbsp;accurate!</span></p>
+            <div class="divider-line dist-to-prev-double dist-to-prev-double--div-line"></div>
+        </div>
+
+
+        <div class="sector-text">
+            <p class="sector-text__paragraph">That&rsquo;s how we could register the exact point of time when the ball passed each coil. The game would challenge the players to press a button as fast as the can just after the ball has passed a coil. The quicker reaction wins a point. Anticipation is as important as reaction time – although it is to mention that if a player pressed too early, he did not get the point but instead got blocked for the next coil.
+            Points and errors due to early pressing were indicated with status LEDs in front of the players. After seven coils the game was decided and the player with more points went off as&nbsp;a&nbsp;winner.</p>
         </div>
 
         <div class="img-full-width-wrap">
-            <img src="img/marble_run_detail.jpg" alt="Marbel Run Detail" class="img-full-width">
-            <div class="vertical-text text-aside img-description marg-top-21">Marble Run Detail</div>
+            <img src="img/magnets_and_coils_8.jpg" alt="Marble Run Detail" class="img-full-width">
+            <div class="vertical-text text-aside img-description marg-top-23">Marble Run Detail</div>
         </div>
 
         <div class="sector-illu-text sector-illu-text--coil clearfix">
             <div class="illu-wrap illu-wrap--coil"><img src="img/coil.png" alt="Copper Coil Graphic"></div>
             <div class="text-by-illu">
-                <p class="text-by-illu__paragraph">During the school project in interaction design at the ZHdK, the topic 'energy harvesting' was centered. We approached this topic in a playful way and built a marble run game, where two players can compete against each other. Short reaction time and good anticipation wins.</p>
+                <p class="text-by-illu__paragraph">Additionally we used a similar concept to make the <strong>input device</strong> (handle with a button) work. Both handles also were constructs made of copper coils and big magnetic balls. By shaking the handle every player could induce current which was saved in a <strong>capacitor</strong>. By pressing the button a little bit of this current was released and registered by the <strong>arduino microcontroller</strong> taking care of processing all the&nbsp;different&nbsp;input.</p>
             </div>
         </div>
 
         <div class="sector-text">
-            <p class="sector-text__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="sector-text__paragraph">So each player has to charge his input device first and release some current at the exact right moment.
+            It is crucial that one does not release too much current at once.</p>
+        </div>
+
+        <div class="sector-highlight">
+            <div class="dist-to-prev-base divider-line"></div>
+            <img class="dist-to-prev-base img-flash" src="img/flash.png"
+                srcset="img/flash.png 1x, img/flash@2x.png 2x" />
+            <p class="highlight-text italic"><span class="underline">Dont use too much current, be wise and accurate,<br>anticipate well and you will win!</span></p>
+            <div class="divider-line dist-to-prev-double--div-line dist-to-prev-double"></div>
+        </div>
+
+        <div class="img-full-width-wrap">
+            <img src="img/magnets_and_coils_7.jpg" alt="Arduino Microcontroller" class="img-full-width">
+            <div class="vertical-text text-aside img-description marg-top-29">Arduino Microcontroller</div>
         </div>
 
     </div>

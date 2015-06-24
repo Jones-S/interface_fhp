@@ -29,6 +29,7 @@ body {
     position: relative;
 }
 
+
 .button {
 }
 
@@ -46,14 +47,13 @@ section {
 }
 
 .video-wrap {
-    height: 100%;
-    min-height: 100%;
-    overflow: hidden;
+    width: 100%;
     video {
-        min-width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
+        width: 100%;
+    }
+    video[poster]{
+        width:100%;
+        margin-top: -0.6rem; // somehow there was a white edge on top
     }
 }
 
@@ -91,6 +91,9 @@ section {
     height: 0.1rem;
     margin: 0 auto;
     background-color: $clr-quiet;
+    @include media("<600px") {
+        margin-bottom: $baseline-height;
+    }
 }
 
 .illu-wrap {
@@ -134,7 +137,8 @@ section {
 }
 
 .marg-top-19 { margin-top: 19rem; }
-.marg-top-21 { margin-top: 21rem; }
+.marg-top-23 { margin-top: 23rem; }
+.marg-top-29 { margin-top: 29rem; }
 
 // different distance to previous elements
 .dist-to-prev-base      { margin-top: $baseline-height; }// 24px = 1 unit of baseline grid
@@ -147,4 +151,10 @@ section {
 .dist-to-next-double    { margin-bottom: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
 .dist-to-next-triple    { margin-bottom: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
 .dist-to-next-quad      { margin-bottom: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
+
+.dist-to-prev-double--div-line {
+    @include media("<600px") {
+        margin-top: 0;
+    }
+}
 

@@ -515,14 +515,37 @@ table {
   width: 100%;
   height: 6.0rem;
   background-color: #F7F7F7;
-  background-color: rgba(247, 247, 247, 0.9);
   font-size: 2.5rem;
   color: #000;
-  line-height: 3.0rem; }
+  line-height: 3.0rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); }
+
+.fixed-nav-bar--transparent {
+  background-color: transparent;
+  box-shadow: none; }
+  .fixed-nav-bar--transparent .menu__links {
+    color: white; }
 
 .fixed-nav-bar li, .fixed-nav-bar a {
   height: 6.0rem;
   line-height: 6.0rem; }
+
+.logo {
+  width: 9%;
+  min-width: 9.0rem;
+  height: 15.0rem;
+  float: left;
+  margin-top: 1.7rem;
+  background: url("../img/magnets_and_coils_logo.svg") no-repeat top left; }
+  @media (max-width: 767px) {
+    .logo {
+      margin-left: 2.0rem; } }
+
+.logo--mini, #menu:target .logo {
+  background: url("../img/magnets_and_coils_logo--mini.svg") no-repeat top left;
+  margin-top: 0.4rem;
+  height: 6.0rem;
+  width: auto; }
 
 .menu {
   width: 90%;
@@ -537,15 +560,15 @@ table {
 
 .menu__items {
   display: inline-block;
-  width: 100%; }
-  @media (max-width: 767px) {
+  width: 88.3%;
+  float: right; }
+  @media (max-width: 879px) {
     .menu__items {
       display: none;
       width: 100%;
       padding-top: 6.0rem;
       background-color: #F7F7F7;
-      background-color: rgba(247, 247, 247, 0.9);
-      background-color: rgba(222, 222, 222, 0.9); } }
+      background-color: #dedede; } }
 
 .menu__items li {
   display: inline-block;
@@ -576,29 +599,29 @@ table {
   background-repeat: no-repeat;
   background-position: center left;
   color: #000; }
-  @media (max-width: 767px) {
+  @media (max-width: 879px) {
     .show, .hide {
       position: absolute;
       top: 0;
       right: 1.5rem; } }
 
-@media (max-width: 767px) {
+@media (max-width: 879px) {
   .show {
     display: inline-block; } }
 
-@media (max-width: 767px) {
+@media (max-width: 879px) {
   .hide {
     display: none; } }
 
-@media (max-width: 767px) {
+@media (max-width: 879px) {
   #menu:target .show {
     display: none; } }
 
-@media (max-width: 767px) {
+@media (max-width: 879px) {
   #menu:target .hide {
     color: #FF3D3D; } }
 
-@media (max-width: 767px) {
+@media (max-width: 879px) {
   #menu:target .hide, #menu:target .menu__items {
     display: inline-block; } }
 
@@ -606,8 +629,13 @@ table {
   height: 5.0rem;
   padding-left: 0; }
 
-.active {
+.fixed-nav-bar--transparent .menu_btn {
+  color: white; }
+
+.fixed-nav-bar--transparent .active, .fixed-nav-bar .active {
   color: #FF3D3D; }
+  .fixed-nav-bar--transparent .active:hover, .fixed-nav-bar .active:hover {
+    color: #ff7070; }
 
 html {
   height: 100%; }
@@ -641,14 +669,12 @@ section {
       min-height: 17rem; } }
 
 .video-wrap {
-  height: 100%;
-  min-height: 100%;
-  overflow: hidden; }
+  width: 100%; }
   .video-wrap video {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%; }
+    width: 100%; }
+  .video-wrap video[poster] {
+    width: 100%;
+    margin-top: -0.6rem; }
 
 .text-aside-wrap {
   position: relative; }
@@ -678,6 +704,9 @@ section {
   height: 0.1rem;
   margin: 0 auto;
   background-color: #969696; }
+  @media (max-width: 599px) {
+    .divider-line {
+      margin-bottom: 1.7rem; } }
 
 .illu-wrap {
   float: left;
@@ -713,8 +742,11 @@ section {
 .marg-top-19 {
   margin-top: 19rem; }
 
-.marg-top-21 {
-  margin-top: 21rem; }
+.marg-top-23 {
+  margin-top: 23rem; }
+
+.marg-top-29 {
+  margin-top: 29rem; }
 
 .dist-to-prev-base {
   margin-top: 1.7rem; }
@@ -740,24 +772,8 @@ section {
 .dist-to-next-quad {
   margin-bottom: 6.8rem; }
 
-body {
-  position: relative; }
-
-body:after {
-  position: absolute;
-  width: auto;
-  height: 7000px;
-  z-index: 9999;
-  content: '';
-  display: block;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(../img/baseline-17.png) repeat top left; }
-
-body:active:after {
-  display: none; }
+@media (max-width: 599px) {
+  .dist-to-prev-double--div-line {
+    margin-top: 0; } }
 
 /*# sourceMappingURL=maps/main.css.map */

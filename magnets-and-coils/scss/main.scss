@@ -1,5 +1,6 @@
 // var definitions
 $width-content:         96.0rem;     // 960px
+$width-logo:            9%;
 
 
 // media query break points
@@ -36,6 +37,6 @@ $baseline-height: 1.7rem;
 @import "tables";
 @import "navigation";
 @import "general";
-@import "basehold";
+// @import "basehold";
 
 
