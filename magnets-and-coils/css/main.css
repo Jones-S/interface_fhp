@@ -353,7 +353,7 @@ html, body {
   font-family: "brandon-grotesque", "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
   font-size: 62.5%;
-  line-height: 1.7rem;
+  line-height: 1.8rem;
   -webkit-font-kerning: normal;
   -moz-font-kerning: normal;
   font-kerning: normal;
@@ -363,7 +363,7 @@ html, body {
 
 .content, nav, footer {
   font-size: 2.5rem;
-  line-height: 3.4rem; }
+  line-height: 3.6rem; }
 
 h1, .h1, h2, .h2, h3, .h3, .h4, .h5, .h6 {
   max-width: 79.0rem;
@@ -371,17 +371,17 @@ h1, .h1, h2, .h2, h3, .h3, .h4, .h5, .h6 {
 
 h1, .h1 {
   font-size: 7.0rem;
-  line-height: 10.2rem;
-  margin-top: 5.1rem;
-  margin-bottom: 1.7rem;
+  line-height: 10.8rem;
+  margin-top: 5.4rem;
+  margin-bottom: 1.8rem;
   font-weight: 700;
   text-transform: uppercase; }
 
 h2, .h2, h3, .h3 {
   font-size: 2.8rem;
-  line-height: 3.4rem;
-  margin-top: 1.7rem;
-  margin-bottom: 1.7rem;
+  line-height: 3.6rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
   text-transform: uppercase; }
 
 .quiet {
@@ -427,9 +427,9 @@ p {
   -ms-hyphens: auto;
   hyphens: auto;
   font-size: 2.5rem;
-  line-height: 3.4rem;
-  margin-top: 1.7rem;
-  margin-bottom: 1.7rem; }
+  line-height: 3.6rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem; }
 
 .weight-book {
   font-family: "brandon-grotesque", "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -449,7 +449,7 @@ p {
   font-size: 1.4rem; }
 
 .size-24 {
-  font-size: 1.7rem; }
+  font-size: 1.8rem; }
 
 .size-40 {
   font-size: 4.0rem;
@@ -481,7 +481,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3.0rem;
-  line-height: 5.1rem; }
+  line-height: 5.4rem; }
 
 .sector-text, .sector-illu-text {
   font-family: "ff-meta-serif-web-pro", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; }
@@ -498,7 +498,7 @@ p {
 
 .highlight-text {
   font-size: 4.0rem;
-  line-height: 5.1rem;
+  line-height: 5.4rem;
   margin-top: -0.9rem; }
 
 table {
@@ -535,7 +535,7 @@ table {
   min-width: 9.0rem;
   height: 15.0rem;
   float: left;
-  margin-top: 1.7rem;
+  margin-top: 1.8rem;
   background: url("../img/magnets_and_coils_logo.svg") no-repeat top left; }
   @media (max-width: 767px) {
     .logo {
@@ -646,6 +646,33 @@ body {
   height: 100%;
   position: relative; }
 
+.small-1 {
+  width: 20%; }
+
+.small-2 {
+  width: 40%; }
+
+.small-3 {
+  width: 60%; }
+
+.small-4 {
+  width: 80%; }
+
+.small-5 {
+  width: 100%; }
+
+@media only screen and (min-width: 768px) {
+  .medium-1 {
+    width: 20%; }
+  .medium-2 {
+    width: 40%; }
+  .medium-3 {
+    width: 60%; }
+  .medium-4 {
+    width: 80%; }
+  .medium-5 {
+    width: 100%; } }
+
 .clearfix:after {
   content: " ";
   visibility: hidden;
@@ -659,14 +686,14 @@ body {
   position: relative; }
 
 .v-rhythm-adjust {
-  margin-top: 1.7rem; }
+  margin-top: 1.8rem; }
 
 section {
-  min-height: 32.3rem;
-  padding-bottom: 5.1rem; }
+  min-height: 34.2rem;
+  padding-bottom: 5.4rem; }
   @media (max-width: 767px) {
     section {
-      min-height: 17rem; } }
+      min-height: 18rem; } }
 
 .video-wrap {
   width: 100%; }
@@ -680,24 +707,31 @@ section {
   position: relative; }
 
 .sector-text, .sector-highlight, .sector-illu-text {
-  margin: 0 auto 3.4rem auto;
+  margin: 0 auto 3.6rem auto;
   width: 90%;
   max-width: 79.0rem;
   position: relative; }
 
 .sector-illu-text--intro {
-  min-height: 25.5rem; }
+  min-height: 27rem; }
 
 .sector-illu-text--coil {
-  min-height: 25.5rem; }
+  min-height: 27rem; }
 
 .sector-highlight {
   text-align: center; }
 
+.sector-tiles img {
+  float: left; }
+
+.tiles__img-row {
+  margin-bottom: -0.1rem;
+  overflow: hidden; }
+
 .img-full-width-wrap {
   overflow: hidden;
   position: relative;
-  margin-bottom: 5.1rem; }
+  margin-bottom: 5.4rem; }
 
 .divider-line {
   width: 20.0rem;
@@ -706,7 +740,7 @@ section {
   background-color: #969696; }
   @media (max-width: 599px) {
     .divider-line {
-      margin-bottom: 1.7rem; } }
+      margin-bottom: 1.8rem; } }
 
 .illu-wrap {
   float: left;
@@ -718,7 +752,7 @@ section {
   left: -12.0rem; }
 
 .illu-wrap--coil {
-  margin-top: -11.85rem;
+  margin-top: -11.75rem;
   left: -7.8rem; }
 
 .text-by-illu {
@@ -749,28 +783,28 @@ section {
   margin-top: 29rem; }
 
 .dist-to-prev-base {
-  margin-top: 1.7rem; }
+  margin-top: 1.8rem; }
 
 .dist-to-prev-double {
-  margin-top: 3.4rem; }
+  margin-top: 3.6rem; }
 
 .dist-to-prev-triple {
-  margin-top: 5.1rem; }
+  margin-top: 5.4rem; }
 
 .dist-to-prev-quad {
-  margin-top: 6.8rem; }
+  margin-top: 7.2rem; }
 
 .dist-to-next-base {
-  margin-bottom: 1.7rem; }
+  margin-bottom: 1.8rem; }
 
 .dist-to-next-double {
-  margin-bottom: 3.4rem; }
+  margin-bottom: 3.6rem; }
 
 .dist-to-next-triple {
-  margin-bottom: 5.1rem; }
+  margin-bottom: 5.4rem; }
 
 .dist-to-next-quad {
-  margin-bottom: 6.8rem; }
+  margin-bottom: 7.2rem; }
 
 @media (max-width: 599px) {
   .dist-to-prev-double--div-line {
