@@ -108,6 +108,7 @@ section {
     overflow: hidden;
     position: relative;
     margin-bottom: 3 * $baseline-height;
+    margin-top: 4 * $baseline-height;
 }
 
 .divider-line {
@@ -120,11 +121,6 @@ section {
     }
 }
 
-.illu-wrap {
-    float: left;
-    position: absolute;
-    top: 50%;
-}
 
 .illu-wrap--intro {
     margin-top: -(25.5rem / 2); // height of img / 2
@@ -136,12 +132,36 @@ section {
     left: -7.8rem; // 50% of the width of the image
 }
 
+.illu-wrap--shift {
+    margin-top: -(21.4rem / 2) - $baseline-height;
+    left: -7.2rem; // 50% of the width of the image
+}
+
+.illu-wrap {
+    float: left;
+    position: absolute;
+    top: 50%;
+    @include media("<1080px") {
+        float: none;
+        display: block;
+        position: relative;
+        top: 0;
+        margin-top: 0;
+        left: 0;
+        text-align: center;
+    }
+}
+
 .text-by-illu {
     width: calc(90% - 24.0rem + (8*1.7rem));
     float: right;
     position: relative;
     // left: -2 * $baseline-height;
     // padding-left: 3 * $baseline-height;
+    @include media("<1080px") {
+        width: 100%;
+        float: none;
+    }
 }
 
 .img-flash {

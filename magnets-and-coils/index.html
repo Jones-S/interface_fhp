@@ -28,8 +28,8 @@
             <div class="logo"></div>
             <ul class="menu__items clearfix">
                 <li><a class="menu__links bold active" href="#">Magnets & Coils</a></li>
-                <li><a class="menu__links bold" href="#">Typeface Analysis</a></li>
-                <li><a class="menu__links bold" href="#">Typography Exercise</a></li>
+                <li><a class="menu__links bold" href="../exercise-03">Typeface Analysis</a></li>
+                <li><a class="menu__links bold" href="../exercise-02">Typography Exercise</a></li>
             </ul>
         </div>
     </nav>
@@ -46,30 +46,30 @@
         <div class="text-aside-wrap">
             <div class="sector-text">
                 <h1 class="h1 center">Magnets & Coils</h1>
-                <div class="divider-line dist-to-prev-triple"></div>
                 <h2 class="h2 center bold">A Marble Run Game</h2>
             </div>
-            <div class="vertical-text text-aside marg-top-19">Jonas Scheiwiller<br>ZHdK</div>
+            <div class="vertical-text vertical-text--jonas text-aside marg-top-19">Jonas Scheiwiller<br>ZHdK</div>
         </div>
 
         <div class="sector-illu-text sector-illu-text--intro clearfix">
-            <div class="illu-wrap illu-wrap--intro"><img src="img/magnet_ball.png" alt="Magnet Ball Graphic"></div>
-            <div class="intro-text text-by-illu">
+            <div class="intro-text">
                 <p class="intro-text__paragraph bold">&ldquo;Magnets and Coils&rdquo; is marble run game, where two players can compete against each other. Short reaction times and well targeted anticipation help to win this game where the aim is to hit a button as swift as possible after the magnetic marble passes one of the copper coils&nbsp;along&nbsp;he&nbsp;run.</p>
             </div>
         </div>
 
-        <div class="sector-text">
-            <p class="sector-text__paragraph">In a physcial computing module in <strong>Interaction Design</strong> at the <strong>ZHdK</strong> we had to come up with a concept to embrace the topic <strong>&ldquo;energy harvesting&rdquo;</strong>.
+        <div class="sector-illu-text sector-illu-text--coil clearfix">
+            <div class="illu-wrap illu-wrap--intro">
+                <img src="img/magnet_ball.png" alt="Magnet Ball Graphic"></div>
+            <div class="text-by-illu">
+                <p class="text-by-illu__paragraph">In a physcial computing module in <strong>Interaction Design</strong> at the <strong>ZHdK</strong> we had to come up with a concept to embrace the topic <strong>&ldquo;energy harvesting&rdquo;</strong>.
 With the premise to use gamification and the knowledge that we can induce current with the use of magnets and copper coils, we decided to build a marble run with a magnetic ball, which passes through copper coils every&nbsp;now&nbsp;and&nbsp;then.</p>
+            </div>
         </div>
 
-        <div class="sector-highlight">
-            <div class="dist-to-prev-base divider-line"></div>
-            <img class="dist-to-prev-base img-flash" src="img/flash.png"
+        <div class="sector-highlight dist-to-next-triple">
+            <img class="img-flash" src="img/flash.png"
                 srcset="img/flash.png 1x, img/flash@2x.png 2x" />
             <p class="highlight-text italic"><span class="underline">You have to be fast<br>and&nbsp;accurate!</span></p>
-            <div class="divider-line dist-to-prev-double dist-to-prev-double--div-line"></div>
         </div>
 
 
@@ -84,7 +84,10 @@ With the premise to use gamification and the knowledge that we can induce curren
         </div>
 
         <div class="sector-illu-text sector-illu-text--coil clearfix">
-            <div class="illu-wrap illu-wrap--coil"><img src="img/coil.png" alt="Copper Coil Graphic"></div>
+            <div class="illu-wrap illu-wrap--coil">
+                <img src="img/coil.png" alt="Copper Coil Graphic"
+                srcset="img/coil.png 1x, img/coil@2x.png 2x" />
+            </div>
             <div class="text-by-illu">
                 <p class="text-by-illu__paragraph">Additionally we used a similar concept to make the <strong>input device</strong> (handle with a button) work. Both handles also were constructs made of copper coils and big magnetic balls. By shaking the handle every player could induce current which was saved in a <strong>capacitor</strong>. By pressing the button a little bit of this current was released and registered by the <strong>arduino microcontroller</strong> taking care of processing all the&nbsp;different&nbsp;input.</p>
             </div>
@@ -95,12 +98,10 @@ With the premise to use gamification and the knowledge that we can induce curren
             It is crucial that one does not release too much current at once.</p>
         </div>
 
-        <div class="sector-highlight">
-            <div class="dist-to-prev-base divider-line"></div>
-            <img class="dist-to-prev-base img-flash" src="img/flash.png"
+        <div class="sector-highlight dist-to-next-triple">
+            <img class="img-flash" src="img/flash.png"
                 srcset="img/flash.png 1x, img/flash@2x.png 2x" />
-            <p class="highlight-text italic"><span class="underline">Dont use too much current, be&nbsp;wise&nbsp;and&nbsp;accurate,<br>anticipate well and you will win!</span></p>
-            <div class="divider-line dist-to-prev-double--div-line dist-to-prev-double"></div>
+            <p class="highlight-text italic"><span class="underline">Don&rsquo;t use too much current, be&nbsp;wise&nbsp;and&nbsp;accurate,<br>anticipate well and you will win!</span></p>
         </div>
 
         <div class="img-full-width-wrap">
@@ -108,7 +109,33 @@ With the premise to use gamification and the knowledge that we can induce curren
             <div class="vertical-text text-aside img-description marg-top-29">Arduino Microcontroller</div>
         </div>
 
-        <div class="sector-tiles">
+        <div class="sector-text">
+            <p class="sector-text__paragraph">Technically speaking, we used – as already mentioned above – copper coils and a magnetic ball to <strong>induce current</strong>. The little black rectangle attached to the coil is a <strong>rectifier</strong>, used for distinguishing the minus and the plus pole. The wires connecting the coils with the arduino are bundled at one point. By using diodes we hinder the current to go from one coil into another and make sure the impulse is delivered to the arduino.</p>
+
+            <p class="sector-text__paragraph">The microcontroller also registers input impulses from the two controllers. Therefore we can measure which player reacted faster. But we also set a certain time frame of a few hundred milliseconds before each coil, which are prohibited. If somebody presses the button and a coil signal follows within our limit (500 ms) the player gets a <strong>punishment</strong> and <strong>can not get the point</strong> for the next coil. This is indicated by the <strong>red status led</strong> next&nbsp;to&nbsp;the&nbsp;counter&nbsp;leds.</p>
+        </div>
+
+        <div class="sector-illu-text sector-illu-text--coil clearfix">
+            <div class="illu-wrap illu-wrap--shift">
+                <img src="img/shift-register.png" alt="Shift Register Graphic"
+                srcset="img/shift-register.png 1x, img/shift-register@2x.png 2x" />
+            </div>
+            <div class="text-by-illu">
+                <p class="text-by-illu__paragraph">By using <a class="underline--link" href="https://en.wikipedia.org/wiki/Shift_register" title="Wikipedia – Shift Register">shift registers</a> we made it possible to control 2 * 7 point-leds and 2 status-leds while also receiving all the different input-signals with the <strong>limited number of pins</strong> on an arduino. (A pin is a I/O connection plug&nbsp;on&nbsp;the&nbsp;arduino-board).</p>
+            </div>
+        </div>
+
+         <div class="sector-text">
+            <p class="sector-text__paragraph"></p>
+
+            <p class="sector-text__paragraph">We also faced a lot of problems in registering the induced current signals, because there was <strong>base noise</strong> of current registered all the time. It was important to only register the right current peaks, which were caused by the ball passing a coil, and not the peaks induced by some magic in the air (magnetic fields etc.). On the other hand we had to <strong>make sure that we&nbsp;catch&nbsp;every&nbsp;coil.</strong></p>
+
+            <p class="sector-text__paragraph">This got further complicated by the fact that the magnetic ball passing a coil sometimes <strong>induced up to four peaks</strong> of current and not only one. We approached this problem by comparing the exact point in time of a peak to the previous one. If the time distance was too short (below ~50ms) then we could be sure that the second peak was caused by the very same coil and therefore we did not include it into comparing it to the players input. If we didn&rsquo;t, it would have been possible to get multiple points&nbsp;for&nbsp;just&nbsp;one&nbsp;coil.</p>
+        </div>
+
+
+
+        <div class="sector-tiles dist-to-prev-triple">
             <div class="tiles__img-row clearfix">
                 <img class="small-5 medium-2" src="img/magnets_and_coils_6.jpg" alt="overview marble run" />
                 <img class="small-5 medium-3" src="img/magnets_and_coils_2.jpg" alt="detail marble run" />
