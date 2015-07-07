@@ -18,16 +18,16 @@ html, body {
 // https://drewish.com/tools/vertical-rhythm/
 // define classes which can then be applied to the elements (modularity!)
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    max-width: 79.0rem;
     font-family: $font-family-base-reg;
 }
 
 .h1 {
     font-size: 7.0rem;
     line-height: 6 * $baseline-height;        // lineheight + margin-top + margin-bottom must be a multiple of 24px (baseline grid)
-    margin-top: 3 * $baseline-height;
+    margin-top: 1 * $baseline-height;
     margin-bottom: $baseline-height;
     font-weight: 700;
+    color: #fff;
 }
 
 .h2, .h3 {
@@ -75,11 +75,16 @@ p {
     -ms-hyphens:        auto;
     hyphens:            auto;
 
+    font-family: $font-family-base-reg;
     font-size: 2.5rem;
     line-height: 2 * $baseline-height; // 1em = $base-font-size, because html/body font-size = $base-font-size -> 1.3333 = 24px
     margin-top: $baseline-height;
     margin-bottom: $baseline-height;
     // http://webtypography.net/2.1.2 -> 33em for article with – in german 40em!
     // our site has a smaller paragraph width
+}
+
+.header__intro-text {
+    color: $clr-tertiary;
 }
 

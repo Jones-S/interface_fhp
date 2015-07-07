@@ -5,9 +5,6 @@ html {
 body {
         background-color: $clr-primary;
         // background-color: #53BEB5; // background color for testing semi transparency
-        width: 100%;
-        height: 100%;
-        position: relative;
 }
 
 .small-1 { width: 1 * (100% / 5); }
@@ -38,20 +35,32 @@ body {
 // The element at the top of the page right after the fixed navigation bar MUST have sufficient top margin or else it will be covered by the bar
 
 
-.marg-top-19 { margin-top: 19rem; }
-.marg-top-23 { margin-top: 23rem; }
-.marg-top-29 { margin-top: 29rem; }
+header {
+    height: 30.0rem;
+    background-color: $clr-secondary;
+    text-align: center;
+    padding-top: 8.5rem;
+}
 
-// different distance to previous elements
-.dist-to-prev-base      { margin-top: $baseline-height; }// 24px = 1 unit of baseline grid
-.dist-to-prev-double    { margin-top: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
-.dist-to-prev-triple    { margin-top: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
-.dist-to-prev-quad      { margin-top: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
+.preview {
+    float: left;
+    height: 50.0rem;
+    position: relative;
+}
 
-// distance to following element
-.dist-to-next-base      { margin-bottom: $baseline-height; }// 24px = 1 unit of baseline grid
-.dist-to-next-double    { margin-bottom: 2 * $baseline-height; } // 48px = 1 unit of baseline grid
-.dist-to-next-triple    { margin-bottom: 3 * $baseline-height; } // 48px = 1 unit of baseline grid
-.dist-to-next-quad      { margin-bottom: 4 * $baseline-height; } // 48px = 1 unit of baseline grid
+.preview--magnets {
+    background: url('../magnets-and-coils/img/magnets_and_coils_8.jpg') no-repeat center center;
+    background-size: 100%;
+    // min-height: 45.0rem;
+}
+
+.preview__txt {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
 
 
