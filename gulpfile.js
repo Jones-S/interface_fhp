@@ -12,8 +12,10 @@ var plumber = require('gulp-plumber');
 
 // Asset paths
 var paths = {
-  sass: ['magnets-and-coils/scss/*.scss'],
-  css:  ['magnets-and-coils/css/'],
+  sass:     ['scss/*.scss'],
+  css:      'css',
+  js:       'js/*.js',
+  js_dist:  'js/dist/',
 };
 
 
@@ -26,14 +28,14 @@ function onError(err) {
 
 // task css also starts task 'compass' as well (probably synchronous)
 gulp.task('sass', function() {
-    gulp.src('magnets-and-coils/scss/main.scss')
+    gulp.src(paths["sass"])
         .pipe(plumber({
                 errorHandler: onError
             }))
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest('magnets-and-coils/css'))
+        .pipe(gulp.dest(paths["css"]))
         .pipe(notify({ message: 'Sass complete' }));
 });
 
@@ -43,7 +45,7 @@ gulp.task('sass', function() {
 gulp.task('concatenate', function() {
     return gulp.src([
                 'bower_components/jquery/dist/jquery.min.js',
-                'magnets-and-coils/js/*.js',
+                paths['js'],
             ])
         .pipe(plumber({
                 errorHandler: onError
@@ -51,7 +53,7 @@ gulp.task('concatenate', function() {
         .pipe(sourcemaps.init())
         .pipe(concat('all.js'))
         .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest('magnets-and-coils/js/dist'))
+        .pipe(gulp.dest(paths['js_dist']))
         .pipe(notify({ message: 'Concatenate task complete' }));
 });
 
@@ -61,10 +63,10 @@ gulp.task('concatenate', function() {
 // Watch Task
 gulp.task('watch', function() {
     // watch scss files
-    gulp.watch(paths.sass, ['sass']);
+    gulp.watch(paths['sass'], ['sass']);
 
     // Watch .js files
-    gulp.watch('magnets-and-coils/js/*.js', ['concatenate']);
+    gulp.watch(paths['js'], ['concatenate']);
 });
 
 
