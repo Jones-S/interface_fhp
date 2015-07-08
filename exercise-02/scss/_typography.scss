@@ -1,3 +1,18 @@
+body, html {
+    text-transform: none;
+    font-size: $font-size-base;    //10px
+    line-height: 2.4rem; //24px = baseline grid
+
+    // ligatures and kerning
+    -webkit-font-kerning:   normal;
+    -moz-font-kerning:      normal;
+    font-kerning:           normal;
+    -webkit-font-feature-settings:      "liga";
+    -moz-font-feature-settings:         "liga", "kern";
+    font-feature-settings:              "liga", "kern";
+
+}
+
 h1, h2, h3, h4, h5 {
   font-family: "brandon-grotesque", sans-serif; //weights: 400 (normal/italic), 700, 900
   margin-bottom: $dist-reg;

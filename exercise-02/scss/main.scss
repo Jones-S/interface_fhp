@@ -8,6 +8,14 @@ $dist-small: 8px;
 $tablet-width: 768px;
 $phone-width: 420px;
 
+// media query break points
+$width-phone:           420px;
+$width-tablet:          768px;
+$width-big-tablet:      1024px;
+$width-desktop:         1400px;
+
+$breakpoints: (phone: $width-phone, tablet: $width-tablet, big-tablet: $width-big-tablet, desktop: $width-desktop);
+
 
 // colors
 $primary-clr:       #D32638;
@@ -15,6 +23,17 @@ $scnd-clr:          #9F98B0;
 $primary-grey:      #D5D5D5;
 $dark-elem:         #010101;
 $bright-clr:        #E4E4E4;
+
+$clr-primary:           #F7F7F7;
+$clr-secondary:         #fff;
+$clr-tertiary:          #e6aa46;
+$clr-quiet:             #969696;
+$clr-link-hover:        #FF3D3D;
+
+$font-family-base:          "brandon-grotesque", sans-serif; //weights: 400 (normal/italic), 700, 900
+$font-family-base-reg:      "brandon-grotesque", sans-serif; //weights: 400 (normal/italic), 700, 900
+$font-family-base-light:    "brandon-grotesque", sans-serif; //weights: 400 (normal/italic), 700, 900
+$font-size-base:            62.5%;      // 16px (default) * 0.625 = 10px        _> base 10 to calc easier
 
 // mixins
 @mixin tablet {
@@ -35,13 +54,14 @@ $bright-clr:        #E4E4E4;
   }
 }
 
+@import "../../bower_components/_normalize.scss/normalize";
+@import "../../bower_components/include-media/dist/include-media";
 
 // import compass
-@import "compass/css3/border-radius";
-@import "compass/css3/box-sizing";
 @import "reset";
 @import "general";
 @import "typography";
 @import "tables";
+@import "navigation";
 
 

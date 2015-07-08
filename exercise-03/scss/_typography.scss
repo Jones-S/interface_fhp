@@ -49,3 +49,18 @@ p {
   font-size: 8.0rem;
   line-height: 1em;
 }
+
+.mobile-note {
+    display: none;
+    font-size: 2.2rem;
+    line-height: 1.4em;
+    font-family: $font-family-base-light;
+    margin-top: 4.0rem;
+    max-width: 33em;
+}
+
+.note {
+    font-size: 2.2rem;
+    font-family: $font-family-base-light;
+    color: #fff;
+}

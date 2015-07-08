@@ -473,6 +473,11 @@ span {
 .author-info__text {
   font-size: 2.0rem;
   line-height: 1.4em; }
+  .author-info__text a {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none; }
 
 .typo-effect {
   overflow: hidden; }
@@ -574,6 +579,9 @@ header {
   overflow: hidden;
   display: block;
   cursor: pointer; }
+  @media (max-width: 989px) {
+    .preview h2 {
+      font-size: 2.2rem; } }
 
 .preview__magnets {
   background: url("../magnets-and-coils/img/magnets_and_coils_8.jpg") no-repeat center center/cover; }

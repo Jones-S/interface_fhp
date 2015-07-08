@@ -12,10 +12,10 @@ var plumber = require('gulp-plumber');
 
 // Asset paths
 var paths = {
-  sass:     ['exercise-01/scss/*.scss'],
-  css:      'exercise-01/css',
-  js:       'exercise-01/js/*.js',
-  js_dist:  'exercise-01/js/dist/',
+  sass:     ['magnets-and-coils/scss/*.scss'],
+  css:      'magnets-and-coils/css',
+  js:       'magnets-and-coils/js/*.js',
+  js_dist:  'magnets-and-coils/js/dist/',
 };
 
 
@@ -45,6 +45,7 @@ gulp.task('sass', function() {
 gulp.task('concatenate', function() {
     return gulp.src([
                 'bower_components/jquery/dist/jquery.min.js',
+                // 'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
                 paths['js'],
             ])
         .pipe(plumber({

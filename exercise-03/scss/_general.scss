@@ -7,7 +7,7 @@ body, html {
 .subtitle-wrap {
   width: 100%;
   min-height: 100%;
-  padding: 10% 10% 10% 10%;
+  padding: 15% 10% 10% 10%;
   background-color: $clr-5th;
   box-sizing: border-box;
 }
@@ -37,4 +37,11 @@ body, html {
   margin: 0 auto;
   img {
   }
+}
+
+.container-middle {
+    width: 100%;
+    padding: 3.0rem 10%;
+    background-color: $clr-5th;
+    box-sizing: border-box;
 }

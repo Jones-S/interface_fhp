@@ -2,23 +2,27 @@
 
 
 // media query break points
-$tablet-width: 768px;
-$phone-width: 420px;
+$width-phone:           420px;
+$width-tablet:          768px;
+$width-big-tablet:      1024px;
+$width-desktop:         1400px;
+
+$breakpoints: (phone: $width-phone, tablet: $width-tablet, big-tablet: $width-big-tablet, desktop: $width-desktop);
 
 
 // colors
-$clr-primary:           #EEEEEE;
+$clr-primary:           #F7F7F7;
 $clr-secondary:         #fff;
+$clr-tertiary:          #e6aa46;
+$clr-quiet:             #969696;
+$clr-link-hover:        #FF3D3D;
+
 $clr-3th:               #000;
 $clr-4th:               #1A1A1A;
 $clr-5th:               #272727;
 $clr-6th:               #e6332a;
 
-// $primary-clr:       #D32638;
-// $scnd-clr:          #9F98B0;
-// $primary-grey:      #D5D5D5;
-// $dark-elem:         #010101;
-// $bright-clr:        #E4E4E4;
+
 
 $font-family-base:          "gt_pressura_trialbold", 'Verdana', Verdana, sans-serif;
 $font-family-base-reg:      "gt_pressura_trial_regularRg", 'Verdana', Verdana, sans-serif;
@@ -27,32 +31,14 @@ $font-size-base:            62.5%;      // 16px (default) * 0.625 = 10px        
 
 
 
+@import "../../bower_components/_normalize.scss/normalize";
+@import "../../bower_components/include-media/dist/include-media";
 
 
-// mixins
-@mixin tablet {
-  @media (min-width: #{$phone-width + 1px}) and (max-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
-@mixin phone {
-  @media (max-width: #{$phone-width}) {
-    @content;
-  }
-}
-
-@mixin tablet-phone {
-  @media (max-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
-// import compass-mixins to use compass with libsass
-@import "./bower_components/compass-mixins/lib/compass";
 // import stylesheets
 @import "reset";
 @import "fontface";
+@import "navigation";
 @import "general";
 @import "typography";
 @import "svg";

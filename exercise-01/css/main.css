@@ -550,6 +550,9 @@ table {
 .menu__items li {
   display: inline-block;
   margin-left: 6%; }
+  @media (max-width: 1069px) {
+    .menu__items li {
+      margin-left: 3.5%; } }
   @media (max-width: 949px) {
     .menu__items li {
       margin-left: 3%;

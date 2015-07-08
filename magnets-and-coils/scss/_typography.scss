@@ -34,6 +34,14 @@ html, body {
     margin-bottom: $baseline-height;
     font-weight: 700;
     text-transform: uppercase;
+    @include media("<tablet"){
+        font-size: 4.0rem;
+        margin-top: 2*$baseline-height;
+    }
+    @include media("<phone"){
+        font-size: 3.0rem;
+        margin-top: $baseline-height;
+    }
 }
 
 .h2, .h3 {
@@ -42,6 +50,14 @@ html, body {
     margin-top: $baseline-height;
     margin-bottom: $baseline-height;
     text-transform: uppercase;
+    @include media("<tablet"){
+        font-size: 2.5rem;
+        margin-top: $baseline-height;
+    }
+    @include media("<phone"){
+        font-size: 1.6rem;
+        margin-top: 0;
+    }
 }
 
 
@@ -116,6 +132,15 @@ p {
     margin-bottom: $baseline-height;
     // http://webtypography.net/2.1.2 -> 33em for article with – in german 40em!
     // our site has a smaller paragraph width
+    @include media("<tablet"){
+        font-size: 2.0rem;
+        margin-top: 2*$baseline-height;
+        line-height: 1.5em;
+    }
+    @include media("<phone"){
+        font-size: 1.7rem;
+        margin-top: $baseline-height;
+    }
 }
 
 .weight-book { font-family: $font-family-base; }
@@ -142,6 +167,12 @@ p {
     -ms-transform-origin: left top;
     -o-transform-origin: left top;
     transform-origin: left top;
+    @include media("<tablet"){
+        font-size: 2.0rem;
+    }
+    @include media("<phone"){
+        font-size: 1.0rem;
+    }
 }
 
 .vertical-text--jonas {
@@ -157,6 +188,12 @@ p {
     font-size: 3.0rem;
     line-height: 1.4em;
     color: $clr-link-hover;
+    @include media("<tablet"){
+        font-size: 2.5rem;
+    }
+    @include media("<phone"){
+        font-size: 2.0rem;
+    }
 }
 
 .sector-text, .sector-illu-text {
@@ -173,10 +210,21 @@ p {
     position: absolute;
     top: 0;
     left: 2.3%;
+
+    @include media("<phone"){
+        display: none;
+    }
 }
 
 .highlight-text {
     font-size:  4.0rem;
     line-height: 3 * $baseline-height;
     margin-top: -0.9rem;
+    @include media("<tablet"){
+        font-size: 3.0rem;
+        line-height: 1.5em;
+    }
+    @include media("<phone"){
+        font-size: 2.7rem;
+    }
 }

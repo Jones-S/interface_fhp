@@ -51,6 +51,11 @@ header {
     overflow: hidden;
     display: block;
     cursor: pointer;
+    h2 {
+        @include media("<990px") {
+            font-size: 2.2rem;
+        }
+    }
 }
 
 .preview__magnets {
