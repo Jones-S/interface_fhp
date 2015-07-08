@@ -1,0 +1,133 @@
+html, body {
+    font-family: $font-family-base-reg;
+    text-transform: none;
+    font-size: $font-size-base;    //10px
+    line-height: $baseline-height; //17px = baseline grid
+
+    // ligatures and kerning
+    -webkit-font-kerning:   normal;
+    -moz-font-kerning:      normal;
+    font-kerning:           normal;
+    -webkit-font-feature-settings:      "liga";
+    -moz-font-feature-settings:         "liga", "kern";
+    font-feature-settings:              "liga", "kern";
+
+}
+
+.content, nav, footer {
+    font-size: 2.5rem;
+    line-height: 2 * $baseline-height;
+}
+
+// http://thesassway.com/advanced/modular-css-typography
+// https://drewish.com/tools/vertical-rhythm/
+// define classes which can then be applied to the elements (modularity!)
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    max-width: 79.0rem;
+    font-family: $font-family-base;
+}
+
+.h1 {
+    font-size: 7.0rem;
+    line-height: 6 * $baseline-height;        // lineheight + margin-top + margin-bottom must be a multiple of 24px (baseline grid)
+    margin-top: 3 * $baseline-height;
+    margin-bottom: $baseline-height;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include media("<530px") {
+        font-size: 4.5rem;
+    }
+}
+
+.h2, .h3 {
+    font-size: 2.8rem;
+    line-height: 2 * $baseline-height;
+    margin-top: $baseline-height;
+    margin-bottom: $baseline-height;
+    text-transform: uppercase;
+}
+
+
+// .h4 { font-size: 110%; }
+// .h5 { font-size: 100%; }
+
+// if necessary to mark text
+.quiet { color: $clr-quiet; }
+// .loud  { color: $loud-color; }
+
+.italic { font-style: italic; }
+.bold   { font-weight: 700; }
+.center { text-align: center; }
+.underline {
+    text-decoration: none;
+    background-repeat: repeat-x;
+
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==);
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #f7f7f7 93%, #f7f7f7 93%, #000000 94%, #000000 96%, #000000 96%, #f7f7f7 97%, #f7f7f7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(93%,#f7f7f7), color-stop(93%,#f7f7f7), color-stop(94%,#000000), color-stop(96%,#000000), color-stop(96%,#000000), color-stop(97%,#f7f7f7), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,#000000 94%,#000000 96%,#000000 96%,#f7f7f7 97%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,#000000 94%,#000000 96%,#000000 96%,#f7f7f7 97%,#f7f7f7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,#000000 94%,#000000 96%,#000000 96%,#f7f7f7 97%,#f7f7f7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,#000000 94%,#000000 96%,#000000 97%,#f7f7f7 97%,#f7f7f7 100%); /* W3C */
+
+    background-position: left 1.3em;
+    text-shadow: -1px -1px 0 $clr-primary, 1px -1px 0 $clr-primary, -1px 1px 0 $clr-primary, 1px 1px 0 $clr-primary;
+ }
+
+.underline--link {
+    background-repeat: repeat-x;
+
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==);
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #f7f7f7 93%, #f7f7f7 93%, $clr-link-hover 94%, $clr-link-hover 96%, $clr-link-hover 96%, #f7f7f7 97%, #f7f7f7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(93%,#f7f7f7), color-stop(93%,#f7f7f7), color-stop(94%,$clr-link-hover), color-stop(96%,$clr-link-hover), color-stop(96%,$clr-link-hover), color-stop(97%,#f7f7f7), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,$clr-link-hover 94%,$clr-link-hover 96%,$clr-link-hover 96%,#f7f7f7 97%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,$clr-link-hover 94%,$clr-link-hover 96%,$clr-link-hover 96%,#f7f7f7 97%,#f7f7f7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,$clr-link-hover 94%,$clr-link-hover 96%,$clr-link-hover 96%,#f7f7f7 97%,#f7f7f7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f7f7f7 0%,#f7f7f7 93%,#f7f7f7 93%,$clr-link-hover 94%,$clr-link-hover 96%,$clr-link-hover 97%,#f7f7f7 97%,#f7f7f7 100%); /* W3C */
+    background-position: left top;
+ }
+
+
+
+i, em { @extend .italic; }
+b, strong { @extend .bold; }
+
+h1, .h1 { @extend .h1; }
+h2, .h2 { @extend .h2; }
+h3, .h3 { @extend .h3; }
+
+
+
+a {
+    color: $clr-link-hover;
+    text-decoration: none;
+    &:hover {
+        color: lighten($clr-link-hover, 15%);
+    }
+}
+
+p {
+    // hyphenation
+    -webkit-hyphens:    auto;
+    -moz-hyphens:       auto;
+    -ms-hyphens:        auto;
+    hyphens:            auto;
+
+    font-size: 2.5rem;
+    line-height: 2 * $baseline-height; // 1em = $base-font-size, because html/body font-size = $base-font-size -> 1.3333 = 24px
+    margin-top: $baseline-height;
+    margin-bottom: $baseline-height;
+    // http://webtypography.net/2.1.2 -> 33em for article with – in german 40em!
+    // our site has a smaller paragraph width
+}
+
+
+
+.center {
+    text-align: center;
+}
+
+.superscript {
+    vertical-align: 0.086em;
+}
+

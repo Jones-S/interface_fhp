@@ -12,10 +12,10 @@ var plumber = require('gulp-plumber');
 
 // Asset paths
 var paths = {
-  sass:     ['scss/*.scss'],
-  css:      'css',
-  js:       'js/*.js',
-  js_dist:  'js/dist/',
+  sass:     ['exercise-01/scss/*.scss'],
+  css:      'exercise-01/css',
+  js:       'exercise-01/js/*.js',
+  js_dist:  'exercise-01/js/dist/',
 };
 
 

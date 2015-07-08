@@ -1,0 +1,139 @@
+.fixed-nav-bar {
+    font-family: $font-family-base;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 6.0rem;
+    background-color: $clr-primary;
+    font-size: 1.9rem;
+    color: #000;
+    line-height: 3.0rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.fixed-nav-bar li, .fixed-nav-bar a {
+    height: 6.0rem;
+    line-height: 6.0rem;
+}
+
+.menu {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    @include media("<tablet") {
+        position: relative;
+        width: 100%;
+    }
+}
+
+
+.menu a:hover, .menu a:target {
+    color: $clr-link-hover;
+}
+
+.menu__items {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    @include media("<tablet") {
+        display: none;
+        width: 100%;
+        padding-top: 6.0rem;
+        background-color: $clr-primary;
+    }
+}
+
+.menu__items li {
+    display: inline-block;
+    margin-left: 6%;
+    @include media("<950px") {
+        margin-left: 3%;
+        font-size: 1.5rem;
+    }
+    @include media("<tablet") {
+        display: block;
+        text-align: center;
+        margin: 0;
+        height: 6.0rem;
+        float: none;
+        font-size: 1.9rem;
+    }
+    &:first-of-type {
+        margin-left: 0;
+    }
+
+}
+
+.menu__links {
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+    color: #000;
+
+    &:hover {
+        color: $clr-link-hover;
+    }
+}
+
+.show, .hide {
+    display: none;
+    padding-left: 1.5rem;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center left;
+    color: #000;
+    @include media("<tablet") {
+        position: absolute;
+        top: 0;
+        right: 1.5rem;
+    }
+}
+
+.show {
+    @include media("<tablet") {
+        display: inline-block;
+    }
+}
+
+.hide {
+    @include media("<tablet") {
+        display: none;
+    }
+}
+
+#menu:target .show {
+    @include media("<tablet") {
+        display: none;
+    }
+}
+
+#menu:target .hide {
+    @include media("<tablet") {
+        color: $clr-link-hover;
+    }
+}
+
+#menu:target .hide, #menu:target .menu__items {
+    @include media("<tablet") {
+        display: inline-block;
+    }
+}
+
+.fixed-nav-bar .menu_btn, .menu_btn {
+    height: 5.0rem;
+    padding-left: 0;
+}
+
+.fixed-nav-bar--transparent .menu_btn {
+    color: white;
+}
+
+.fixed-nav-bar--transparent .active, .fixed-nav-bar .active {
+  color: $clr-link-hover;
+  &:hover {
+    color: lighten($clr-link-hover, 10%);
+  }
+}
