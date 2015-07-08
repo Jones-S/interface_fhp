@@ -27,14 +27,16 @@ html, body {
     margin-top: 1 * $baseline-height;
     margin-bottom: $baseline-height;
     font-weight: 700;
-    color: #fff;
+    color: lighten($clr-quarternary, 10%);
+    font-family: $font-family-base;
+    @include media("<phone") {
+        font-size: 3.0rem;
+    }
 }
 
 .h2, .h3 {
     font-size: 2.8rem;
     line-height: 2 * $baseline-height;
-    margin-top: $baseline-height;
-    margin-bottom: $baseline-height;
 }
 
 
@@ -84,7 +86,81 @@ p {
     // our site has a smaller paragraph width
 }
 
+span {
+    -webkit-hyphens:    auto;
+    -moz-hyphens:       auto;
+    -ms-hyphens:        auto;
+    hyphens:            auto;
+
+    font-family: $font-family-base-reg;
+    font-size: 2.0rem;
+    line-height: 2 * $baseline-height;
+}
+
+h1 span {
+    @extend .h1;
+}
+
 .header__intro-text {
-    color: $clr-tertiary;
+    color: lighten($clr-quarternary, 25%);
+    color: $clr-link-hover;
+}
+
+.author-info h2 {
+    @include media("<740px") {
+        text-align: center;
+        margin-bottom: 3.0rem;
+    }
+}
+
+.author-info__text {
+    font-size: 2.0rem;
+    line-height: 1.4em;
+}
+
+.typo-effect {
+    overflow: hidden;
+}
+
+.typo-effect span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.typo-effect:hover span:first-of-type {
+    color: $clr-link-hover;
+}
+
+.typo-effect:hover span:last-of-type {
+    color: $clr-quarternary;
+}
+
+.typo-effect span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $clr-link-hover;
+    line-height: 0.8;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.typo-effect span:last-of-type::before {
+    background: $clr-quarternary;
+}
+
+.typo-effect:hover span:last-of-type::before,
+.typo-effect span:first-of-type::before {
+    -webkit-transform: translate3d(0,-150%,0);
+    transform: translate3d(0,-150%,0);
+}
+
+.typo-effect:hover span:first-of-type::before,
+.typo-effect span:last-of-type::before {
+    -webkit-transform: translate3d(0,150%,0);
+    transform: translate3d(0,150%,0);
 }
 

@@ -15,7 +15,9 @@ body {
 
 @media only screen and (min-width: $width-tablet) {
     .medium-1 { width: 1 * (100% / 5); }
+    .medium-1_25 { width: 1.25 * (100% / 5); }
     .medium-2 { width: 2 * (100% / 5); }
+    .medium-2_5 { width: 2.5 * (100% / 5); }
     .medium-3 { width: 3 * (100% / 5); }
     .medium-4 { width: 4 * (100% / 5); }
     .medium-5 { width: 5 * (100% / 5); }
@@ -46,21 +48,104 @@ header {
     float: left;
     height: 50.0rem;
     position: relative;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
 }
 
-.preview--magnets {
-    background: url('../magnets-and-coils/img/magnets_and_coils_8.jpg') no-repeat center center;
-    background-size: 100%;
-    // min-height: 45.0rem;
+.preview__magnets {
+    background: url('../magnets-and-coils/img/magnets_and_coils_8.jpg') no-repeat center center / cover;
 }
+
+.preview__typeface {
+    background: url('../img/gr_pressura_teaser.jpg') no-repeat center center / cover;
+}
+
+.preview__blog {
+    background: #424648 url('../img/htc.png') no-repeat center center / 90%;
+}
+
+.preview__micro {
+    background: url('../img/text.jpg') no-repeat center center / cover;
+}
+
+.preview__img {
+    height: 100%;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+}
+
+
+.preview:hover .preview__img {
+    -moz-transform: scale(1.04,1.04);
+    -webkit-transform: scale(1.04,1.04);
+    transform: scale(1.04,1.04);
+}
+
+.preview:hover a {
+    color: #fff;
+}
+
 
 .preview__txt {
     display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: $clr-quarternary;
+    background-color: rgba($clr-quarternary, 0.9);
+    padding: 1.3rem 1.4rem 1.0rem 1.4rem;
 
+}
+
+footer {
+    padding-top: 9.0rem;
+    padding-bottom: 9.0rem;
+}
+
+.footer__content {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 60.0rem;
+}
+
+.footer__img {
+    float: left;
+    height: 20.0rem;
+    width: 20.0rem;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 50%;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 50%;
+    /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+    border-radius: 50%;
+    object-fit: cover;
+
+    @include media("<740px") {
+        float: none;
+        display: block;
+        margin: 0 auto 5.0rem auto;
+    }
+}
+
+.author-info {
+    float: right;
+    width: 50%;
+
+    @include media("<740px") {
+        float: none;
+        display: block;
+        width: 100%;
+    }
 }
 
 

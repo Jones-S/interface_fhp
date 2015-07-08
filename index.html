@@ -6,47 +6,56 @@
     <meta name="description" content="" />
       <meta name="keywords" content="" />
     <meta name="robots" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <script type="text/javascript" src="js/dist/all.js"></script>
 </head>
 <body>
     <header>
-        <h1>Webtypografie</h1>
+        <h1 class="typo-effect"><span>Web</span><span>typografie</span></h1>
         <div>
             <p class="header__intro-text">
-                FH Potsdam ・ Summer Term 2015
-
+                FH Potsdam・Summer Term 2015
             </p>
         </div>
     </header>
 
     <div class="clearfix">
-        <div class="small-5 preview preview--magnets">
+        <div class="small-5 preview" onclick="window.location='magnets-and-coils/index.html';">
+            <div class="preview__magnets preview__img"></div>
             <div class="preview__txt">
                 <h2><a href="magnets-and-coils/index.html">Magnets and Coils</a></h2>
             </div>
         </div>
-        <div class="medium-3 small-5 preview preview--typeface">
+        <div class="medium-2_5 small-5 preview" onclick="window.location='exercise-03/index.html';">
+            <div class="preview__typeface preview__img"></div>
             <div class="preview__txt">
-                <h2><a href="">Typeface Analysis</a></h2>
+                <h2><a href="exercise-03/index.html">Typeface Analysis</a></h2>
             </div>
         </div>
-        <div class="medium-1 small-5 preview preview--blog">
+        <div class="medium-1_25 small-5 preview" onclick="window.location='exercise-01/index.html';">
+            <div class="preview__blog preview__img"></div>
             <div class="preview__txt">
-                <h2><a href="">Blog Redesign</a></h2>
+                <h2><a href="exercise-01/index.html">Blog Redesign</a></h2>
             </div>
-        </div>
-        <div class="medium-1 small-5 preview preview--micro">
+        </div>        <div class="medium-1_25 small-5 preview" onclick="window.location='exercise-02/index.html';">
+            <div class="preview__micro preview__img"></div>
             <div class="preview__txt">
-                <h2><a href="">Micro- and Microtypography</a></h2>
+                <h2><a href="exercise-02/index.html">Micro- and Macrotypography</a></h2>
             </div>
         </div>
     </div>
     <footer class="clearfix">
-        <img src="" alt="" class="footer__img">
-        <div class="author-info">
-            <h2>Jonas Scheiwiller</h2>
-            <p class="author-info__text"></p>
+        <div class="footer__content">
+            <img src="img/jonas_scheiwiller.jpg" alt="Jonas Scheiwiller Portrait" class="footer__img">
+            <div class="author-info">
+                <h2>Jonas Scheiwiller</h2>
+                <p class="author-info__text">
+                    Zurich-based interaction designer with backgrounds film, advertising and biology.
+                    Always interested in mastering challenging projects regardless if in the field of interface design, user experience, web-development, interactive installations or&nbsp;alltogether.
+                </p>
+                <span>Drop me a line at <a href="mailto:jonas@jonasscheiwiller.ch">me@jonasscheiwiller.ch</a></span>
+            </div>
         </div>
     </footer>
 </body>
