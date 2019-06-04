@@ -458,7 +458,7 @@ h2, .h2, h3, .h3 {
   /* IE10+ */
   background: linear-gradient(to bottom, #f7f7f7 0%, #f7f7f7 93%, #f7f7f7 93%, #000000 94%, #000000 96%, #000000 97%, #f7f7f7 97%, #f7f7f7 100%);
   /* W3C */
-  background-position: left 1.3em;
+  background-position: left 1.15em;
   text-shadow: -1px -1px 0 #F7F7F7, 1px -1px 0 #F7F7F7, -1px 1px 0 #F7F7F7, 1px 1px 0 #F7F7F7; }
 
 .underline--link {
